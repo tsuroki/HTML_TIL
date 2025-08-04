@@ -22,3 +22,32 @@ git config --global user.name "Your Name"
 ### 터미널 "Ctrl + J' 기본 설정
 * 윈도우 기본 터미널 powershell을 git bash로 변경
 * (위 gitBash는 Git 설치 후 사용 가능)
+
+## git 설정과 git HUB 업로드 순서 (터미널 입력 기준)
+1. 'git config --list' / 현재 GIT 설정 정보 확인
+2. 새 입력창이 뜨지 않을 때, 터미널에서 'ctrl + C' 또는 'Q'를 사용하여 종료 / Terminal에서는 복사의 단축키가 아닌 Cancel의 의미햣이므로 헷갈리지 말것
+3. 이메일과 이름은 gitHub 가입이메일, 아이디와 일치하게 작성하는 것을 권장!
+4. 위 1번에서 깃 설정정보에 name, emil이 내 정보가 아닐 때
+'git config --global user.email "you@example.com"'
+'git config --global user.name tsuroki (메일 아이디와 동일)'
+5. 'git config --list' 사용하여 올바르게 설정됐는지 확인
+6. 'git init' 현재 폴더를 작업 디렉터리 폴더로 연결, 폴더경로 옆에 **master** 확인
+7. 'git branch -M main' / branch는 git directory 명칭으로, 이름을 지정해줘야 헷갈릴 일이 없으므로 이름 설정을 해주는 명령어가 'git branch -M "name"' 인 것. 여기서는 이름을 "main"이라고 설정하자고 명령어를 부여해주는 것이다.
+---
+8. 'git add . ' 여기서 .을 입력한 이유는 작업 수정한 모든 파일을 대기소(Stage)에 모든 파일을 업로드 하는것을 말한다. 'git add README.md'라고 작성하면 해당 파일만 업로드 하는 것.
+9. 'git status' 현재 상태 또는 스테이지 확인 명령
+
+
+
+# git 파일 버전 관리를 위한 명령어 
+##git config --global user.email "tsuroki0210@gmail.com"
+##git config --global user.name "tsuroki"
+
+##git init
+##git branch -M main
+##git add .
+##git commit -m ‘메세지기록’
+##git remote add origin 깃허브저장소주소
+##git push origin main
+
+주기 확인
