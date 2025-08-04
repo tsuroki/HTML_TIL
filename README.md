@@ -36,7 +36,21 @@ git config --global user.name "Your Name"
 ---
 8. 'git add . ' 여기서 .을 입력한 이유는 작업 수정한 모든 파일을 대기소(Stage)에 모든 파일을 업로드 하는것을 말한다. 'git add README.md'라고 작성하면 해당 파일만 업로드 하는 것.
 9. 'git status' 현재 상태 또는 스테이지 확인 명령
+10. 'git commit -m "기록메세지"' 현재 올리는 파일이 어떤 내용인지 기록
+11. 'git remote add origin 깃허브저장주소' 깃허브 저장소 업로드 위치를 연결 시켜줌
+12. 'git push origin main' 10번에서 커밋한 파일을 11번 저장소에 최종 업로드하는 명령
 
+### 한번만 작성하면 끝인 깃 명령어
+* 'git config' 이름, 이메일 설정
+* 'git init' 저장소 설정
+* 'git branch -M main' 저장소이름 설정
+* 'git remote add origin' 저장소 주소 설정
+
+### 작업 시 깃허브 업로드를 위해 반복해야하는 깃 명령어
+* 'git add .' 
+* 'git commit -m "기록메세지"
+* 'git push origin main'
+* 필요시 중간 점검용으로 ' git log' 또는 'git status'
 
 
 # git 파일 버전 관리를 위한 명령어 
