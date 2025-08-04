@@ -63,5 +63,3 @@ git config --global user.name "Your Name"
 ##git commit -m ‘메세지기록’
 ##git remote add origin 깃허브저장소주소
 ##git push origin main
-
-주기 확인
