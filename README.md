@@ -68,3 +68,36 @@ git config --global user.name "Your Name"
 *'<시작태그 속성 ="값", 속성="값"></닫기태그>
 *시작태그부터 닫기태그까지 한번에 **요소**라는 명칭으로 부른다.
 *속성은 시작태그에만 쓰고 닫기태그에는 속성을 쓰지 않는다.
+*"파일명.html" 파일 저장시 (영문, 영어 대문자, 소문자, 숫자)으로만 작성
+*HTML 장성의 시작은 항상 **구조태그**로 시작한다.
+
+*ctrl + \ 분할 창 생성 횡
+*ctrl + K + \ 분할 창 세로 생성
+*ctrl + 들여쓰기, 내어쓰기
+*alt + 방향키 위, 아래 
+
+## vscode 자주쓰는 단축키
+'ctrl + \ 화면 분할'
+'ctrl + k, \ 화면 상 하 분할'
+'Alt+Z 자동 줄 바꿈
+'Alt + 상하 방향키 줄 이동'
+'Shift + alt + 상하방향키 "줄 복제"'
+'Shift + alt + A 주석 생성'
+
+##
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><!-- 다국어 살장 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- meta:desc, metqa:kw / 사이트 요약 ㅅ정보와 키워드 설정은 별도 -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>HTML|2일차 기초</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+여기서 Head의 형제는 body이다.
