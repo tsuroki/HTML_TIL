@@ -84,7 +84,15 @@ git config --global user.name "Your Name"
 'Shift + alt + 상하방향키 "줄 복제"'
 'Shift + alt + A 주석 생성'
 
-##
+## 250805 자주쓰는 HTML 문서 기본태그
+1. '<h1>~<h6> BLOCK TAG 1대제목~6소제목
+2. '<p> block tag 제목 아래 작성하는 내용 태그
+3. '<br> Inline tag 내용안에 작성하는 줄바꿈 태그
+4. '<em><strong>' inline - 내용 안 강조태그
+5. '<del>' inline - 쇼핑몰 원가 등에 사용하는 삭제 태그
+6. '<address>' block - 회사주소 등 자회사 정보 표기에 사용하는 태그. 협력업체는 표시 X
+7. '&--;' 특수문자 태그. 표기하고 싶은 특수문자가 있을경우 &와; 사이에 표기.
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
