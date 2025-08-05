@@ -63,3 +63,8 @@ git config --global user.name "Your Name"
 ##git commit -m ‘메세지기록’
 ##git remote add origin 깃허브저장소주소
 ##git push origin main
+
+#HTML 작성법
+*'<시작태그 속성 ="값", 속성="값"></닫기태그>
+*시작태그부터 닫기태그까지 한번에 **요소**라는 명칭으로 부른다.
+*속성은 시작태그에만 쓰고 닫기태그에는 속성을 쓰지 않는다.
