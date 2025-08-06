@@ -91,7 +91,7 @@ git config --global user.name "Your Name"
 4. '<em><strong>' inline - 내용 안 강조태그
 5. '<del>' inline - 쇼핑몰 원가 등에 사용하는 삭제 태그
 6. '<address>' block - 회사주소 등 자회사 정보 표기에 사용하는 태그. 협력업체는 표시 X
-7. '&--;' 특수문자 태그. 표기하고 싶은 특수문자가 있을경우 &와; 사이에 표기.
+7. '&--;' 특수문자 inline 태그. 표기하고 싶은 특수문자가 있을경우 &와; 사이에 표기
 
 <!DOCTYPE html>
 <html lang="en">
@@ -109,3 +109,14 @@ git config --global user.name "Your Name"
 </html>
 
 여기서 Head의 형제는 body이다.
+
+## 레이아웃 태그
+1. 그룹 DIV
+2개 이상의 인라인 or 블록 요소를 묶어주는 그룹태그
+2. 인라인 SPAN
+2개 이상의 인라인 요소를 묶을 때 사용
+
+## 태그 + 이름 속성
+1. .class : 반복유형 분류시 사용, 반복 지정 가능
+2. #id : 전체 페이지 중 단 하나의 요소에만 지정 시 사용.
+** CLASS와 ID는 태그 관계없이 모든 태그에 적용할 수 있다. (태그 구분 목적)
