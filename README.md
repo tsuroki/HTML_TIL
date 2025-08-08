@@ -132,3 +132,5 @@ git config --global user.name "Your Name"
 7. '<a href=" ">' 하이퍼링크 삽입을 위한 태그 작성
 8. '<a href=" " target=" "> 링크 위치 속성
 _blank: 새 창에 특정 경로를 입력하여 이동시킵니다.
+9. '<a href=" " target="./"> 지정된 타겟의 파일로 링크시켜, 상대경로를 지정해 파일을 열게한다.
+10. '<a href=" " target="../"> 현재 지정된 경로의 상위경로로 이동한다.
