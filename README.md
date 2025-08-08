@@ -120,6 +120,7 @@ git config --global user.name "Your Name"
 1. .class : 반복유형 분류시 사용, 반복 지정 가능
 2. #id : 전체 페이지 중 단 하나의 요소에만 지정 시 사용.
 ** CLASS와 ID는 태그 관계없이 모든 태그에 적용할 수 있다. (태그 구분 목적)
+3. class와 id는 중요한 기능일수록 부여율이 높다
 
 ## 250806 layout tag tip
 1. '<div>' : 2개 이상의 블록 또는 인라인을 묶어주는 그룹,
