@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="멀티미디어, 링크, 이미지, 비디오">
+    <meta name="description" content="링크. 이미지, 비디오 | 멀티미디어 요소 코딩 연습">
+    <!-- 파비콘 favicon / link:favicon-->
+    <link rel="shortcut icon" href="./images/notepad.png" type="image/x-icon">
+    <title>링크, 이미지, 비디오 | 멀티미디어 요소</title>
+</head>
+<body>
+    <h1>바로가기 링크</h1><!-- 링크의 경우, 굳이 다른 페이지나 파일이 아니더라도, 같은 페이지 내 다른 영역으로 이동이 가능하다. -->
+    <p>뷰포트 높이보다 웹페이지 길이가 긴 경우 사용</p>
+    <a href="">링크 공부 위치로 이동</a>
+    <a href="">이미지 공부 위치로 이동</a>
+    <a href="">비디오 공부 위치로 이동</a>
+    <hr>
+    <h1>멀티미디어 요소</h1>
+    <h2>링크 태그</h2>
+    <p><a href="https://gdweb.co.kr" target="_blank">GDweb 바로가기 | 웹사이트 디자인 참고 사이트</a></p><br>
+    <p><a href="./basic_megabox1.html">메가박스 코딩결과</a></p>
+    <!-- 상대경로 : ./ 파일경로 연결 / 절대 경로 : https:// 사이트 연결 -->
+    <!-- <a> 인라인 코드 요소이기 때문에, 링크 옆에 새로운 링크 요소가 연결되어 나타난다. -->
+    <hr>
+    <!-- 이미지도 비디오고, html이 아닌 외부요소이기 때문에 경로 설정이 필요함. -->
+    <h2>이미지 태그</h2><!-- 블록 -->
+    <p><img src="./images/aoa_banner.jpg" alt="접근성 오픈 아카데미 유튜브 채널 AOA 구독하기, 매주 월요일 콘텐츠 업데이트!"></p>
+    <p><img src="./images/banner02_img01.png" alt="19시까지 주문 시 당일 발송 됩니다."></p><!-- img 태그는 인라인이므로 p로 블록 만들어서 블록 안에 위치하게 -->
+    <hr>
+    <h2>링크와 이미지 태그</h2>
+    <p>웹에 사용되는 이미지는 사용자와 상호작용하는 클릭 가능 이미지라면 a 링크 태그가 반드시 함께 해야한다.</p>
+    <a href="#"><img src="./images/banner02_img02.png" alt="포토리뷰"></a>
+    <hr>
+    <a href="#"><img src="./images/common_cart02.png" alt="장바구니 열기"></a>
+    <a href="#"><img src="./images/common_menu.png" alt="메뉴열기"></a>
+    <a href="#"><img src="./images/common_my.png" alt="마이페이지 또는 로그인"></a>
+    <a href="#"><img src="./images/common_search.png" alt="검색하기"></a>
+    <a href="#"><img src="./images/detail_icon_wish.png" alt="관심항목 추가하기"></a>
+    <hr>
+    <h2>비디오 태그</h2>
+    <p>비디오 태그는 로컬위치에 영상파일이 있는 경우 사용하는 태그다.</p>
+    <video src="./video/cat.mp4" autoplay muted loop controls></video>
+    <video src="./video/coffee.mp4" autoplay muted loop controls></video>
+    <video src="./video/forest.mp4" autoplay muted loop controls>
+        <track><!-- 자막 -->
+        <source><!-- 2개 이상의 확장자 연결 -->
+    </video>
+    <hr>
+    <h2>유튜브 비디오 연결 iframe</h2><!-- iframe은 블록 태그도 되고 인라인 태그도 된다. -->
+    <iframe width="469" height="856" src="https://www.youtube.com/embed/QYc7TYy8B0Q?autoplay=1&loop=1&mute=1&controls=0&playlist=QYc7TYy8B0Q" title="전설의 1일 1깡에 짱구는 못말려 오프닝 넣기" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- autoplay=1&mute=1&loop=1&playlist=동영상 주소&controls=1 / 이 때 0 또는 1을 넣어서 적용 여부를 부여한다. -->
+</body>
+</html>
