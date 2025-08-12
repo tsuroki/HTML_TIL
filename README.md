@@ -155,4 +155,6 @@ _blank: 새 창에 특정 경로를 입력하여 이동시킵니다.
 ### github 폴더 복제 방법
 * 'git clone 주소붙여넣기'
 ### 폴더 이동 방법
-cd (폴더명)
+* cd (폴더명)
+### git hub  수정된 작업물 내려받기
+* git pull origin main
