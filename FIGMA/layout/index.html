@@ -7,16 +7,60 @@
     <meta name="keywords" content="">
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
     <title>마봉식 | 웹디자이너&웹퍼블리셔&프론트엔드</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <!-- CSS를 HTML과 같이 쓸 경우, CSS는 Head 안 title 다음에 온다. -->
+    <style>
+        /* 선택자 {속성:값; 속성:값;} -> CSS 코드*/
+        /* div {background-color: aqua;} */
+        /* CSS 작성순서) 모든 HTML 선택자 작성 -> 속성:값 채우기 */
+        body {background-color: #000;}
+        #wrap {
+            background-color: #fff;
+            /* 크기 CSS - 가로 width, 세로 height - 0이 아닌 수는 단위 필수! */
+            width: 440px; height:150vh ; /* vh -> viewport height */
+            /* 안쪽 여백 padding - 패딩점퍼라고 생각하면 편하다. */
+            padding-left:15px;
+            padding-right:15px;
+        }
+        #wrap header {}
+        #wrap header .profile_img {}
+        #wrap header .profile_img img {width : 100%;}
+        #wrap header h1{}
+        #wrap header h1+h2{}
+        /* main~footter */
+        #wrap main {}
+        #wrap main h2 {}
+        #wrap main div.block {
+            background-color: #eee;
+            padding-top: 10px; padding-bottom: 20px; padding-left: 15px; padding-right: 15px;
+        }
+        #wrap main div.inline {}
+        #wrap footer {}
+        #wrap footer p {}
+        #wrap footer p em {}
+        #wrap footer p span {}
+    </style>
 </head>
 <body>
-    <div class="wrap">
+    <div id="wrap">
         <header class="title">
-            <img src="" alt="">
+            <p class="profile_img"><img src="/images/profile_photo.jpg" alt="메인화면_이미지"></p>
+            <h1>Mabonsik
+            </h1>
+            <h2>UI/UX 프론트엔드 반응형웹디자인&웹퍼블리셔 개발 양성과정</h2>
         </header>
-        <main></main>
+        <main>
+            <h2>HTML 공부태그</h2>
+            <div class="block">h1, h2, h3, h4, h5, h6, p, 
+                blockquote, ul, ol, li , dl, dt, dd, div, hr, 
+                header, main, section, aside, nav, footer, article, a, video
+            </div>
+            <div class="inline">span, em, strong, br, img, a, sup, sub, code, mark, s, q, del</div>
+            <!-- 글자 속성 -->
+        </main>
         <footer>
             <p>
-                <em>Yu jae hun</em>
+                <em>Yu jae hun</em><br>
                 <span>tsuroki0210@gmail.com</span>
             </p>
         </footer>

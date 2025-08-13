@@ -161,3 +161,103 @@ _blank: 새 창에 특정 경로를 입력하여 이동시킵니다.
 
 * clone을 통해 동일한 버전의 저장소를 내려받고 push and pull 시스템의 명령어를 이용해 파일을 Push->저장소->pull 하여 파일 관리를 진행
 * 파일 관리를 통해  /집<-(main)->학원/ 집에서 push(밀기)를 하였다면 학원에서 pull(당기기)하고, 학원에서 push(밀기)를 하였다면 다시 집에서 pull(당기기) 하고
+
+# 250813
+##CSS에 대해
+
+# CSS(CASCADING STYLE SHEETS)란
+
+html이 뼈대, java script가 근육이라면, css는 피부 조직 및 외형을 말한다.
+사용자에게 시각적으로 보이는 문서를 꾸미는 언어이며
+Cascading(폭포), 단계별로 적용하는 것이 규칙이다.
+부모태그부터 시작해서 자식 자손으로 이어져 가야한다.
+
+# CSS 적용
+
+CSS는 html과 같이 쓰느냐, 별개의 파일을 만드느냐로 나뉜다.
+## CSS selector
+### 선택자 {속성:값;}
+* 선택자 : CSS로 디자인하는 대상
+* {} : 속성과 값을 묶어주는 CSS 디자인 괄호
+* 속성 : 선택자에 적용하는 속성
+* 값 : 속성 값
+* ; : 앞 속성값이 여기서 종료 되었다는 것을 의미.
+
+기존, 우리가 html은 ' <태그 속성="값" 속성 "값></태그> ' 로 끝났다
+그러나 CSS는 선택자 {속성=값;} 형태로 끝난다.
+
+---
+
+색상을 적용한다고 해보자.
+/callout color
+background-color
+
+Css Tag
+'<h1>제목</h1>'
+일 경우
+
+h1{color="ffffff"}
+태그가 반복될 경우, 수정이 많이 어려워 지기 때문에
+<h1 id="heading">제목</b1>
+<h1 class="heading">제목</b1>
+h1 {color: red:}
+#heading{color: red;}
+h1#heading{color: red;}
+h1.heading{colo: red;}
+
+이렇게 #을 통해 ID, .을 통해 CLASS를 지정하여 속성을 적용시킨다.
+
+여기서 선택자에 코드 없이, .이냐 #만을 넣고 속성과 값을 적용시킨다면
+태그와 관계없이 .이나 #을 가진 태그라면 모두 적용시키기 때문에
+정확성을 높이려면 tag#id{color: red;} or tag.class{color: red;}처럼 써야한다.
+
+그리고 선택자 끼리, tag # id와 같이 띄어쓰기를 할 경우 다른 값이 되어버리므로 공백없이 작성할 것.
+
+## 자식에게 속성과 값을 적용할 경우
+<div>
+    <a>menu</a>
+</div>
+div a{color: red;} div의 자식부터 자손까지 전부, a를 가졌다면 color red를 부여한다
+div > a{color: red;} div의 자식 중에서 a를 가진 애만 color red를 부여한다.
+
+자식도 자손도 디자인 상관없이 색이 같아야 한다면 첫번째 방법을,
+자식과 자손을 구분하여 작성하고 싶다면 두번째 방법을 사용한다.
+
+.parent a{color: red;} 1)태그에 상관없이 / 2).parent란 class를 가졌고 / 3)a 태그의 자식과 자손을 가졌다면/ 4) color: red를 적용시켜라.
+
+.parent > a {color: red;} 1)태그에 상관없이 / 2).parent란 class를 가졌고 / 3)a 태그의 자식이 있다면/ 4) 자식에게만 color: red를 적용시켜라.
+
+div.parent a {color: red;} 1) div태그 중 / 2).parent란 class를 가졌고 / 3)a 태그의 자식과 자손을 가졌다면/ 4) color: red를 적용시켜라.
+
+div.parent > a {color: red;} 1)div 태그 중 / 2).parent란 class를 가졌고 / 3)a 태그의 자식이 있다면/ 4) 자식에게만 color: red를 적용시켜라.
+
+구별 잘 할것.
+
+자식에 자식을 타고 들어간다면
+선택자 > 선택자 > 선택자 > 선택자 ... {속성:값;} 이렇게 작성 해야 할것
+
+---
+
+.parent p {color: red}
+.parent h1+p{color:pink;} <!-- h1+p : h1과 인접한 형제들(바로 옆) 태그에 pink를 부여 -->
+.parent h1~p{color:yellow;} <!-- h1부터 그 다음 P까지 color=yellow를 부여 -->
+
+    <div class="parent">
+        <p>1</p>
+        <h1>w</h1>
+        <p>2</p>
+        <p>3</p>
+    </div>
+
+h1~p -> h1 그 이후에 p태그를 가지고 있다면 속성값을 부여
++p -> 인접한 p에게 속성값을 부여
+
+---
+
+# CSS
+## 캐스케이딩 스타일 시트(폭포 단계별로 작성 CSS)
+###CSS 기초작성 순서
+1. 'styles.reset.css' 파일 만들기
+2. html파일 head안 'link:css' 사용하여 자동완성 작성하고 위 1번파일 연결
+3. (html 작성 완료 기준) 부모-> 자식 순서대로 모든 선택자 작성하기 '{}' 중괄호는 비운상태로.
+4. 모든 선택자 작성후 '{속성:값;}' 추가로 작성하며 디자인 진행
