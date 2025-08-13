@@ -25,16 +25,52 @@
         #wrap header {}
         #wrap header .profile_img {}
         #wrap header .profile_img img {width : 100%;}
-        #wrap header h1{}
-        #wrap header h1+h2{}
+        #wrap header h1{
+            font-family: 'pretendard'; font-weight: 600;
+            font-size:32px;
+            margin-bottom: 4px; margin-top: 12px;
+            /* 행간, 자간은 기본값으로 생략 */
+        }
+        #wrap header h1+h2{
+            font-family: 'pretendard'; font-size: 16px; font-weight: 400;
+            margin-bottom: 12px; padding-bottom:12px; border-bottom: 1px solid #bbb;
+        }
         /* main~footter */
         #wrap main {}
-        #wrap main h2 {}
+        #wrap main>h2.list {
+            font-family: 'pretendard'; font-size: 14px; font-weight: 600;
+            margin-bottom: 16px;
+        }
         #wrap main div.block {
             background-color: #eee;
             padding-top: 10px; padding-bottom: 20px; padding-left: 15px; padding-right: 15px;
+            /* 글자속성 */
+            font-family: 'pretendard';
+            font-size: 13px;
+            line-height: 150%; /* 행간 */
+            color: #3700FF;
+            /* 블록과 인라인 요소 띄우기 */
+            margin-bottom: 16px;
         }
-        #wrap main div.inline {}
+        #wrap main div.inline {
+            background-color: #eee; color: #FF8800 ;
+            padding-top: 10px; padding-bottom: 20px; padding-left: 15px; padding-right: 15px;
+            font-size: 13px; font-family: 'pretendard'; line-height: 150%;
+            margin-bottom: 16px;
+        }
+        #wrap main>h2.direct {
+            font-family: 'pretendard'; font-size: 16px; font-weight: 600;
+            border-bottom: 1px solid #bbb; padding-bottom: 6px; margin-bottom: 6px;
+        }
+        #wrap .result {
+            font-family: 'pretendard';
+            font-size : 13px;
+            font-weight: 400;
+            margin-bottom: 6px;
+            }
+        #wrap .result li {margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #bbb;}
+        #wrap .result li img {width: 14px; height: 14px;}
+        #wrap .result li a {padding-left: 10px;}
         #wrap footer {}
         #wrap footer p {}
         #wrap footer p em {}
@@ -50,13 +86,22 @@
             <h2>UI/UX 프론트엔드 반응형웹디자인&웹퍼블리셔 개발 양성과정</h2>
         </header>
         <main>
-            <h2>HTML 공부태그</h2>
+            <h2 class="list">HTML 공부목록</h2>
             <div class="block">h1, h2, h3, h4, h5, h6, p, 
                 blockquote, ul, ol, li , dl, dt, dd, div, hr, 
                 header, main, section, aside, nav, footer, article, a, video
             </div>
             <div class="inline">span, em, strong, br, img, a, sup, sub, code, mark, s, q, del</div>
-            <!-- 글자 속성 -->
+            <h2 class="direct">작업결과 바로가기</h2>
+            <ul class="result">
+                <li><img src="./images/arrow.png" alt="바로가기"><a href="./leeddeok.html" target="_blank">이낙근찹쌀떡</a></li>
+                <li><img src="./images/arrow.png" alt="바로가기"><a href="./ohou_product.html" target="_blank">오늘의 집</a></li>
+                <li><img src="./images/arrow.png" alt="바로가기"><a href="./soopsori.html" target="_blank">숲소리</a></li>
+            </ul>
+            <h2>과제제출</h2>
+            <ul class="result">
+                <li><img src="./images/arrow.png" alt="바로가기"><a href="#">대백과사전 HTML</a></li>
+            </ul>
         </main>
         <footer>
             <p>
