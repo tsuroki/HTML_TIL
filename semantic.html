@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="시멘틱 태그에 대해">
+    <meta name="keywords" content="Sementic tag, 시멘틱 태그">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>시멘틱 태그 | HTML5</title>
+</head>
+<body>
+    <!-- 시멘틱 태그 2개이상 사용할 경우 class 및 id 사용 필수 -->
+    <header><!-- header 안에 nav가 들어간다. -->
+        <a href=""><h1>오늘의집(로고)</h1></a>
+        <!-- nav는 주 메인메뉴에 사용하며, 다른 보조메뉴, 하위 카테고리는 ul, li, a등 사용
+        / h는 단독 이용시 사용 가능.-->
+        <nav>
+            <a href="#" class="community">커뮤니티</a>
+            <a href="#" class="shopping">쇼핑</a>
+            <a href="#" class="interior">인테리어 생활</a>
+        </nav>
+    </header>
+        <!-- 자식 요소로 제목을 가진 section(권장) -->
+    <main>
+        <section>
+            <h2>베스트</h2>
+            <p>내용</p>
+        </section>
+        <!-- sementic 태그가 2개 이상 들어가면 이름 필수! -->
+        <section class="content">
+            <section class="news"><h1>뉴스</h1></section>
+            <section class="blog"><h2>블로그</h2></section>
+        </section>
+        <aside>사이드 메뉴 또는 콜아웃 박스</aside>
+        <aside class="news"><h2>뉴스</h2></aside>
+        <aside class="weather"><h2>날씨</h2></aside>
+        <article>qmffhrm, 뉴스기사, 광고</article>
+    </main>
+    <!-- 회사정보, 계열사, 고객센터 정보 -->
+    <footer></footer>
+    <hr>---
+    <!-- 주 내용 구성) -->
+    <header>
+        <nav>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside></aside>
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <article>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </article>
+    </main>
+    <footer></footer>
+</body>
+</html>
