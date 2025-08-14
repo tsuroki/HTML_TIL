@@ -27,7 +27,7 @@ input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance:none;
     margin:0;
 }
-/* firefox -*/
+/* firefox -ㅎ*/
 input[type=number] {
     -moz-appearance:none;
     margin:0;
