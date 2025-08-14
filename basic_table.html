@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>표 | html</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- font-family 작성된 파일보다 먼저 선언 -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="./FIGMA/layout/styles/reset.css">
+    <!-- padding-top: 10px; padding-bottom: 10px;
+            padding-left: 12px; padding-right: 12px; -->
+    <style>
+        h1 {
+            margin-top: 5px;
+            margin-bottom: 10px;
+            font-family: 'pretendard', 'Noto Sans KR';
+            font-weight: 600;
+            font-size: 24px;
+        }
+        #t1 {
+            border:2px solid #000; width : 200px; /* height: 100px; */
+            /* 테이블 폭 입력 시 열은 자동으로 크기 나눠가짐, 열의 개수에 따라 값 입력하기 */
+            
+        }   
+        #t1 tr {}
+        #t1 tr th {background-color: antiquewhite;}
+        #t1 tr td {
+            border: 1px solid #f00;
+            width: 100px; padding-top: 20px; padding-bottom: 20px;
+            /* height 값이 고정되어있어도 padding속성에 값을 부여한다면, 그 값만큼 공간을 확보한다. */
+        }
+        /* --------------------------------------------------------------- */
+        /* --------------------------------------------------------------- */
+        hr{margin-top: 10px;}
+        table#t2{
+            background-color: antiquewhite;
+            border: 2px solid #fff; width: 150px;
+        }
+        table#t2 tr{
+        }
+        table#t2 th{color:slateblue;
+            border: 1px solid #fff;
+            font-family: "pretendard"; font-size: 20px; font-weight: 700;
+            padding-top: 8px; padding-bottom: 8px;
+        }
+        table#t2 tr td{
+            border: 1px solid #fff; width: 50px; color: #f00;
+            padding-top: 8px; padding-bottom: 8px; padding-left: 10px;
+        }
+        body table#t2 tr:nth-child(2) td:nth-child(2) {background-color: #f00;}
+        /* --------------------------------------------------------------- */
+        /* --------------------------------------------------------------- */
+        #meeting{
+            border: 3px solid #000; width: 300px; height: 600px;
+        }
+        #meeting thead{background-color: skyblue; border:  1px solid #000;}
+        #meeting thead tr{}
+        #meeting thead tr th{}
+        #meeting tbody{background-color: beige; border: 1px solid #000;}
+        #meeting tbody tr{}
+        #meeting tbody tr th{ }
+        #meeting tbody tr th span{}
+        #meeting tbody tr td{ }
+        #meeting tfoot{background-color: pink; border: 1px solid #000;}
+        #meeting tfoot tr{}
+        #meeting tfoot tr th{ }
+        #meeting tfoot tr td{ }
+        /* ----------------------------------------------------------------- */
+        /* ----------------------------------------------------------------- */
+        #plan {background-color: #f1f1f1;
+        width: 1000px;
+        margin-bottom: 20px;
+        font-family: 'pretendard', '바탕체', 'sans-serif';
+        font-size: 1em;
+        }
+        #plan thead {border-top: 4px solid #000 ;}
+        #plan thead tr{}
+        #plan thead tr th{
+            padding: 10px;
+            border-bottom: 1px #ddd solid;
+            font-size: 1em;
+        }
+        #plan thead tr th.company{width:90px;}
+        #plan thead tr th span{ font-size: 0.75em; padding-top: 20px; padding-bottom: 20px;}
+        #plan tbody {}
+        #plan tbody tr{}
+        #plan tbody tr th{ text-align: left;
+            padding-top: 10px; padding-bottom: 10px; border-bottom: 1px #ddd solid;
+        }
+        #plan tbody tr th em{background-color: #cfa7f8; color: #ffffff}
+        #plan tbody tr th strong{ font-size: 1em; }
+        #plan tbody tr td{
+            text-align: center;
+            width: 110px; padding-left: 10px; padding-right: 10px; padding-top: 10px;
+            padding-bottom: 10px; border-bottom: 1px #ddd solid;
+        }
+        #plan tbody tr td span{ font-size: 0.75em; }
+        #plan tbody tr td em{}
+        #plan tbody tr td .price{font-weight: 600; color: #ee239B;}
+        #plan tbody tr td .join{}
+        #plan tbody tr td .sel{
+            background-color: #cfa7f8; color: #ffffff;
+        }
+        table#plan
+        tbody
+        tr
+        th:nth-child(1) {text-align: center;}
+    </style>
+</head>
+<body>
+    <h1>
+        2행 2열 표
+    </h1>
+    <table id="t1">
+        <tr>
+            <th>1열(제목)</th>
+            <td>2열</td>
+        </tr>
+        <tr>
+            <td>1열</td>
+            <td>2열</td>
+        </tr>
+    </table>
+    <hr>
+    <h1>3행 2열</h1>
+    <table id="t2">
+        <tr class=1st_row>
+            <th>1열</th>
+            <th>2열</th>
+        </tr>
+        <tr class="2nd_row">
+            <td>1열</td>
+            <td>2열</td>
+        </tr>
+        <tr class="3rd_row">
+            <td>1열</td>
+            <td>2열</td>
+        </tr>
+    </table>
+    <hr>
+    <h1>국회 회의록 시스템</h1>
+    <table id="meeting">
+        <!-- 행그룹->행->열(제목/내용) -->
+        <thead>
+            <tr>
+                <th>선수</th>
+                <th>출석횟수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>초선(152)</th>
+                <td>105.4</td>
+            </tr>
+            <tr>
+                <th>재선(67)</th>
+                <td>94.4</td>
+            </tr>
+            <tr>
+                <th>3선(49)</th>
+                <td>94.7</td>
+            </tr>
+            <tr>
+                <th>4선(17)</th>
+                <td>98.1</td>
+            </tr>
+            <tr>
+                <th>5선 이상(13)</th>
+                <td>72.2</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>평균</th>
+                <td>99.3</td>
+            </tr>
+        </tfoot>
+    </table>
+    <!-- ------------------------------------------------------------------------ -->
+    <hr>
+    <!-- ------------------------------------------------------------------------ -->
+    <h1>요금제</h1>
+    <table id=plan>
+        <thead>
+            <tr>
+                <th class="company">업체</th>
+                <th>요금제명</th>
+                <th>데이터</th>
+                <th>음성</th>
+                <th>문자</th>
+                <th>월 정액<br><span>(부가세 포함금액)</span></th>
+                <th>상세</th>
+                <th>비고</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 1 -->
+            <tr>
+                <th><a href="#">Amobile</a></th>
+                <th><em>추천</em><br><strong>요금폭탄방지 매일 2GB</strong></th>
+                <td>11GB<br><span>(초과시 매일 2GB+3mb 속도로 무제한 이용)</span></td>
+                <td>기본제공<br><span>(영상/부가 300분)</span></td>
+                <td>기본제공</td>
+                <td>월<em class="price">20,900</em>원</td>
+                <td><a href="" class="join">가입하기</a></td>
+                <td><a href="" class="sel">선택하기</a></td>
+            </tr>
+            <!-- 2 -->
+            <tr>
+                <th><a href="#">Amobile</a></th>
+                <th><em>추천</em><br><strong>A 데이터 무제한</strong></th>
+                <td>15GB<br><span>(초과시 3Mbps 속도로 무제한 이용)</span></td>
+                <td>100분</td>
+                <td>100건</td>
+                <td>월<em class="price">16,500</em>원</td>
+                <td><a href="" class="join">가입하기</a></td>
+                <td><a href="" class="sel">선택하기</a></td>
+            </tr>
+            <!-- 3 -->
+            <tr>
+                <th><a href="#">smarttel</a></th>
+                <th><em>추천</em><br><strong>스마트 톡(Talk)</strong></th>
+                <td>100MB<br><span>(초과시 400Mbps속도로 무제한 이용)</span></td>
+                <td>50분</td>
+                <td>-</td>
+                <td>월<em class="price">6,000</em>원</td>
+                <td><a href="" class="join">가입하기</a></td>
+                <td><a href="" class="sel">선택하기</a></td>
+            </tr>
+            <!-- 4 -->
+            <tr>
+                <th><a href="#">yeoyou</a></th>
+                <th><em>추천</em><br><strong>여유 100</strong></th>
+                <td>100MB<br><span>(데이터 차단기능/차단시 100MB 이용불가)</span></td>
+                <td>100분</td>
+                <td>100건</td>
+                <td>월<em class="price">3,300</em>원</td>
+                <td><a href="" class="join">가입하기</a></td>
+                <td><a href="" class="sel">선택하기</a></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
