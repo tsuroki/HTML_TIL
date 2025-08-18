@@ -2,37 +2,49 @@
 body {background-color: #222;}
 #wrap {margin-right: 15px; margin-left: 15px; background-color: #fff;
     width:440px; height: 100%vh; padding: 179px 15px; /* w값 설정된 바깥쪽 레이아웃 요소 가운데배치 */margin:0 auto;}
-#wrap h1 {font-size: 2rem; font-weight: 900; margin-bottom: 30px}
-#wrap h1>p {}
-#wrap #login_form {margin-top: 40px;}
+#wrap h1 {font-size: 2rem; font-weight: 900; margin: 0 0 30px}
+#wrap > p {margin: 0 0 30px;}
+#wrap #login_form {}
 /* 아이디, 비번 */
-#wrap #login_form .id_pw_group {}
+#wrap #login_form .id_pw_group {margin: 0 0 40px;}
 #wrap #login_form .id_pw_group dl {}
-#wrap #login_form .id_pw_group dl dd {margin-bottom: 40px;}
+#wrap #login_form .id_pw_group dl dd {}
+#wrap #login_form .id_pw_group dl dd:nth-child(2) { margin: 0 0 40px;}
 #wrap #login_form .id_pw_group dl dt {
-    font-size: 1.25rem; font-weight: 700; margin-bottom: 20px;
+    font-size: 1.25rem; font-weight: 700; margin:0 0 20px;
 }
 #wrap #login_form .id_pw_group dl dd .idpw { width: 100%; border-radius: 10px;
-    padding: 15px 0px 15px 15px;  border: #aaa 1px solid;
+    padding: 15px;  border: #aaa 1px solid;
     /* 실제 입력데이터 글자 디자인 정보 */
 } /* 공통 */
 #wrap #login_form .id_pw_group dl dd .idpw ::placeholder {} /* 공통 안내문 */
 #wrap #login_form .id_pw_group dl #user_email_id {} /* 개별 */
 #wrap #login_form .id_pw_group dl #user_pw {} /* 개별 */
+#wrap #login_form .id_pw_group .error {
+    color: #f00; font-size: 0.875rem; font-weight: 600; margin: 40px 0 0;
+    display: none;
+} /* 개별 */
 /* 버튼, 가입* */ 
-#wrap #login_form .btn_search_group {}
-#wrap #login_form .btn_search_group h2{margin-bottom: 20px;}
+#wrap #login_form .btn_search_group {border-radius: 10px;}
+#wrap #login_form .btn_search_group h2{margin-bottom: 20px; font-weight: 700;}
 #wrap #login_form .btn_search_group p{}
-#wrap #login_form .btn_search_group .btn{font: weight 700px;
-    display: block; width:100%;  padding: 15px 0px;  border-radius: 10px;
-} /* a와 버튼 공통 */
+#wrap #login_form .btn_search_group .btn{
+    display: block; width:100%;  padding: 15px 0px;
+}
+/* a와 버튼 공통 */
+#wrap #login_form .btn_search_group p:nth-child(4) {}
 #wrap #login_form .btn_search_group p #login_btn{
-    font-weight: 700; background-color: #000; color: #fff; margin-bottom: 20px;
-    
-} /* 로그인 */
+    font-weight: 700; background-color: #000; color: #fff; border-radius: 10px;
+    margin:0 0 20px;
+}
+/* 로그인 */
 #wrap #login_form .btn_search_group #sign_in_google{
-    font-weight: 700; border: #aaa 1px solid; text-align: center;
-    margin-bottom: 40px;
-} /* 구글 */
-#wrap #login_form .btn_search_group .no-account{text-align: center; font-size: 0.875rem;}
+    border: #aaa 1px solid; text-align: center; border-radius: 10px;
+}
+
+#wrap #login_form .btn_search_group #sign_in_google a{
+    font-weight: 700;
+}
+/* 구글 */
+#wrap #login_form .btn_search_group .no-account{text-align: center; font-size: 0.875rem; margin:30px 0 0;}
 #wrap #login_form .btn_search_group .no-account .sign_up{font-weight: 700;}
