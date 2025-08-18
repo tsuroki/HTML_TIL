@@ -1,22 +1,38 @@
 /* 외부스타일 시트 (HTML 공유가능) */
-#wrap {}
-#wrap h1 {font-size: 2rem; font-weight: 900;}
+body {background-color: #222;}
+#wrap {margin-right: 15px; margin-left: 15px; background-color: #fff;
+    width:440px; height: 100%vh; padding: 179px 15px; /* w값 설정된 바깥쪽 레이아웃 요소 가운데배치 */margin:0 auto;}
+#wrap h1 {font-size: 2rem; font-weight: 900; margin-bottom: 30px}
 #wrap h1>p {}
-#wrap #login_form {}
+#wrap #login_form {margin-top: 40px;}
 /* 아이디, 비번 */
 #wrap #login_form .id_pw_group {}
 #wrap #login_form .id_pw_group dl {}
-#wrap #login_form .id_pw_group dl dd {}
-#wrap #login_form .id_pw_group dl dt {}
-#wrap #login_form .id_pw_group dl dd .idpw {} /* 공통 */
+#wrap #login_form .id_pw_group dl dd {margin-bottom: 40px;}
+#wrap #login_form .id_pw_group dl dt {
+    font-size: 1.25rem; font-weight: 700; margin-bottom: 20px;
+}
+#wrap #login_form .id_pw_group dl dd .idpw { width: 100%; border-radius: 10px;
+    padding: 15px 0px 15px 15px;  border: #aaa 1px solid;
+    /* 실제 입력데이터 글자 디자인 정보 */
+} /* 공통 */
+#wrap #login_form .id_pw_group dl dd .idpw ::placeholder {} /* 공통 안내문 */
 #wrap #login_form .id_pw_group dl #user_email_id {} /* 개별 */
 #wrap #login_form .id_pw_group dl #user_pw {} /* 개별 */
-/* 버튼, 가입* */
+/* 버튼, 가입* */ 
 #wrap #login_form .btn_search_group {}
-#wrap #login_form .btn_search_group h2{}
+#wrap #login_form .btn_search_group h2{margin-bottom: 20px;}
 #wrap #login_form .btn_search_group p{}
-#wrap #login_form .btn_search_group.btn{} /* a와 버튼 공통 */
-#wrap #login_form .btn_search_group p #login_btn{} /* 로그인 */
-#wrap #login_form .btn_search_group p #sign_in_google{} /* 구글 */
-#wrap #login_form .btn_search_group .no-account{}
-#wrap #login_form .btn_search_group .no-account .sign_up{}
+#wrap #login_form .btn_search_group .btn{font: weight 700px;
+    display: block; width:100%;  padding: 15px 0px;  border-radius: 10px;
+} /* a와 버튼 공통 */
+#wrap #login_form .btn_search_group p #login_btn{
+    font-weight: 700; background-color: #000; color: #fff; margin-bottom: 20px;
+    
+} /* 로그인 */
+#wrap #login_form .btn_search_group #sign_in_google{
+    font-weight: 700; border: #aaa 1px solid; text-align: center;
+    margin-bottom: 40px;
+} /* 구글 */
+#wrap #login_form .btn_search_group .no-account{text-align: center; font-size: 0.875rem;}
+#wrap #login_form .btn_search_group .no-account .sign_up{font-weight: 700;}

@@ -356,3 +356,22 @@ ex) li:nth-child(2){background-color: red;} 2개 이상의 목록 중 2번쨰 li
 <!-- button은 현재 창에서 다음 단계로 넘어가려고 할 때 쓰는 태그 -->
 <!-- a는 현재 단계에 상관없이 다른 창이나 다른 사이트로 넘어갈 때 쓰는 태그-->
 <!-- button 기능을 활성하기 위해 특정 조건 ex)login 이 필요할 경우 a태그를 쓰고 role속성으로 "button" 준다. -->
+
+# 요소 크기 속성 width / hegith
+px -> 고정 / % -> 부모 / vw -> 화면
+
+# padding and margin 구별법
+1. 부모와 자식 관계면 Padding (품는다)
+2. 형제관계면 Margin (형제끼리 거리두듯이)
+3. 형제끼리의 영역을 제외하고 나머지 영역이 Margin이다.
+
+# padding and margin 값 시계 방향 부여
+Top right bottom left
+시계 순으로 0,0,0,0 부여
+
+# padding and margin 값 부여
+padding or margin : 50px 50px 50px 50px = padding or margin : 50px
+padding or margin : 1px 2px -> 상하 1px, 좌우 2px
+padding or margin : 1px 0 2px -> 상 1px, 좌우 0px, 하 2px
+
+# Margin 겹침현상 주의
