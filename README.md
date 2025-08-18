@@ -331,3 +331,28 @@ FF중 첫번째 F는 채도 강도값을 의미하며, 두번째 F는 세부값�
 * :nth-child(n) 형태로 작성되며, 반복 패턴을 따라 자식이 2개 이상 있을 때 N번쨰 자식이란 개념으로 선택한다.
 클래스와 아이디로 의미있는 이름을 짓기 적합한 대상이 아닌경우 이름을 짓지않고 css 선택이 가능해 다양한 경우에 유용하게 사용할 수 있다.
 ex) li:nth-child(2){background-color: red;} 2개 이상의 목록 중 2번쨰 li을 선택하여 배경색을 적용하는 수열 선택자.
+
+## HTML - FORM (블록태그)
+사용자 입력/선택 요소 1개라도 등장 시 전체 영역을 'FORM' 묶어주기 **action, method, id** 필수
+* 폼 안쪽 양식 종류가 그룹별로 2개 이상 구분 될 경우 'fieldset, legend' 작성한다.
+
+## fieldset (블록태그)
+* fieldset' 은 'div'처럼 그룹역할 이므로 id 또는 Class를 함께 작성해야한다.
+* 'filedset' 생략하고 대신 'div, ul, ol, dl' 등 다른 그룹으로 대체하는 것도 가능하다.
+
+## form - input (인라인 태그)
+* "<input type="종류" name ="데이터명" id="데이터명"(중복X) class="공통 디자인명">"
+* 'value' 속성은 필요한 경우만 작성, (ex) 쇼핑몰 수량 기본값 1
+
+## input 버튼요소 button, input (인라인 태그)
+<input type="button" vaule="기본">
+<input type="submit" vaule="제출">
+<input type="reset" vaule="초기화">
+
+<button type="button">기본</button>
+<button type="submit">제출</button>
+<button type="reset">초기화</button>
+
+<!-- button은 현재 창에서 다음 단계로 넘어가려고 할 때 쓰는 태그 -->
+<!-- a는 현재 단계에 상관없이 다른 창이나 다른 사이트로 넘어갈 때 쓰는 태그-->
+<!-- button 기능을 활성하기 위해 특정 조건 ex)login 이 필요할 경우 a태그를 쓰고 role속성으로 "button" 준다. -->

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- reset -->
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/google_login.css">
+    <!-- 웹 글꼴 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* 내부 스타일 시트 (HTML간 CSS스타일 공유 불가하므로, 외부연결 권장) */
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrap">
+        <h1>Welcome back</h1>
+        <p>Welcome back! Please enter your details.</p>
+        <!-- form == block | 선택ㅡ 입력 양식을 붂는 그룹-->
+        <form action="#" method="post" id="login_form">
+            <fieldset class="id_pw_group"> <!-- 블록 -->
+                <legend>입력양식</legend><!-- 인라인 -->
+                <dl>
+                    <dt class="id">email</dt>
+                    <!-- 보통 id 또는 class, name을 똑같이 설정한다. -->
+                    <dd><input name="user_email_id" id="user_email_id" class="idpw" placeholder="Enter your email or id"></dd>
+                    <dt class="pass">password</dt>
+                    <dd><input name="user_pw" id="user_pw" class="idpw" placeholder="Enter your Password"></dd>
+                </dl>
+            </fieldset>
+            <fieldset class="btn_search_group">
+                <legend>버튼 & 찾기</legend>
+                <h2>forgot password</h2>
+                <p><button type="submit" id="login_btn" class="btn">login</button></p>
+                <p><a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.google.com%2F&dsh=S-1927394875%3A1755489541673683&ec=futura_exp_og_so_72776762_e&flowEntry=ServiceLogin&flowName=GlifWebSignIn&hl=ko&ifkv=AdBytiN-Vf3h93vALKWCHP-c_TwrA0mCq4ytXw8izD1qX9nxKzbApjrEsIDqSjlK-Rh3I9Iewsxe1g" target="_blank" id="" class="btn">Sign in with Google</a></p>
+                    <p class="no-account">Don't have on account?<a href="#" class="sign_up">Sign up for free</a></p>
+            </fieldset>
+        </form>
+        <!-- <h2>Email</h2>
+        <h2>Password</h2>
+        <h2>Forgot password</h2> -->
+    </div>
+</body>
+</html>
