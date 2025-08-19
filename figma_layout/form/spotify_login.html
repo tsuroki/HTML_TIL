@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="login, spotify, spotify_login, 스포티파이">
+    <meta name="keywords" content="SIGN IN SPOTIFY">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/spotify_login.css">
+    <title>Login | Spotify</title>
+</head>
+<body>
+    <main id="login_wrap">
+        <h1><a href="#"><img src="./image/Logo.svg" alt="spotify_login"></a></h1>
+        <div id="tab">
+            <!-- id 는 중복되지 않는 고유 값 / Active라는 변동 가능성이 주어졌으므로 따로 class를 부여한다. -->
+            <a href="#" id="sign_in" class="active">SIGN IN</a>
+            <a href="#" id="sign_up">SIGN UP</a>
+        </div>
+        <!-- IF, SIGN IN tab is opened -->
+        <div class="sign_in_contents">
+            <form action="#" method="post" id="sign_in_frm">
+                <ul class="id_pw_g">
+                    <li><input type="text" name="user_name" id="user_name" class="name_pw" placeholder="Username"></li>
+                    <li><input type="password" name="user_pass" id="user_pass" class="name_pw" placeholder="Password"></li>
+                </ul>
+                <div class="login_status">
+                    <input type="checkbox" name="login_y" id="login_y">
+                    <!-- 선택요소 만들 땐 라벨이 거의 필수요소 -->
+                    <!-- label의 속성인 for는 주로 id나 name에 연결됨 -->
+                    <!-- checkbox 대체용 배경이미지 적용 태그 -->
+                    <span class="chk_bg"></span>
+                    <label for="login_y">stay signed in</label>
+                </div>
+                <div class="btn_forget">
+                    <button type="submit" id="sign_in_btn">sign in</button>
+                    <p><a href="#" class="forget_pw">Forget Password?</a></p>
+                </div>
+                
+            </form>
+        </div>
+        <!-- IF, SIGN IN tab is opened -->
+        <div class="sign_up_contents">
+        </div>
+    </main>
+</body>
+</html>

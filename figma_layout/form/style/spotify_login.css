@@ -1,0 +1,107 @@
+body {background: #222;
+    /* background image 연습 */
+/* background: #222 url(https://i.pinimg.com/736x/55/b8/ac/55b8ace3f6165177b2f737d45101dcb4.jpg) no-repeat 262px 0 */
+} /* body */
+
+/* 로고 */
+/* 정렬, 크기, 여백 등 값을 빠르게 체크하기 위한 목적으로 헥사코드가 아닌
+테스트용도란 뜻으로 영문으로 색상을 입력하면서
+배경색 및 테두리를 진행하고 최종 디자인 후 해당 값을 모두 제거한다. */
+body #login_wrap {
+    /* background-color: blue; */
+    width: 500px;
+    margin: 0 auto;
+    padding: 97px 0 0;
+} /* 로그인 전체 wrap */
+body #login_wrap h1 {
+    margin: 0 0 87px;
+    text-align: center;
+} /* 스포티파이 로고 */
+body #login_wrap h1 a{} /* 스포티파이 링크 걸기 */
+body #login_wrap h1 img{} /* 스포티 파이 이미지 */
+
+/* 탭메뉴 */
+body #login_wrap #tab {
+    text-align: center;
+    /* text-align 해석 : h1의 자식, 자손 중 인라인 요소 (단순 글자 포함, 인라인 태그까지)
+    를 가운데로 보내기 */
+    margin: 0 0 55px /* 1 */
+}/* SIGN IN and SIGN UP DIV */
+body #login_wrap #tab #sign_in {margin: 0 136px 0 0;} /* SIGN IN iD */
+body #login_wrap #tab #sign_up {} /* SIGN UP ID */
+body #login_wrap #tab #sign_in,
+body #login_wrap #tab #sign_up {
+    font-size: 1.25rem; color: #fff; /* 1 */
+    display: inline-block; /* 2 */
+} /* SIGN UP ID, UP 성질 동시부여 */
+body #login_wrap #tab .active {
+    border-bottom: solid 3px #1ED760;/* 1 */
+    padding: 0 0 10px;/* 2 */
+    /* a inline 태그는 여백&크기 인식이 되지않는, 
+    성질 부여하기 위한 부여 인라인 태그이기 때문에, 이를 해결하기 위해서는
+    display를 사용함*/
+} /* 성질부여 */
+
+/* SIGN IN */
+body #login_wrap {} /* logo 바로 아래 main 구역 */
+body #login_wrap .sign_in_contents #sign_in_frm {} /* input 하단 입력 창 공동 구역 */
+body #login_wrap .sign_in_contents #sign_in_frm .id_pw_g {
+    margin-bottom: 31px;
+} /* input-ul 구역 */
+body #login_wrap .sign_in_contents #sign_in_frm .id_pw_g li {
+    padding: 25px 40px; background-color: #fff; border-radius: 36.5px;
+    ;
+} /* input-ul list (id pass) */
+body #login_wrap .sign_in_contents #sign_in_frm .id_pw_g li:first-child {
+    margin-bottom: 14px;
+}
+body #login_wrap .sign_in_contents #sign_in_frm .id_pw_g #user_name {
+    
+} /* input_id */
+body #login_wrap .sign_in_contents #sign_in_frm .id_pw_g #user_pass{
+} /* input창 공통 class */
+body #login_wrap .sign_in_contents #sign_in_frm .id_pw_g .name_pw{
+    width: 100%; 
+}
+body #login_wrap .sign_in_contents #sign_in_frm .login_status .chk_bg {
+    /* 이미지태그는 삽입과 동시에 크기 인식 */
+    /* 배경 이미지 CSS는 크기 자동인식(X) 필요한 모든값은 수동 */
+    /* 활성화 노랑 / 비활성화 노랑 */
+    background-image: url(../image/check_off.svg);
+    width: 24px; height: 24px;
+    display: inline-block;
+}
+ /* 로그인 div */
+body #login_wrap .sign_in_contents #sign_in_frm .login_status {
+margin-bottom: 31px;
+}
+body #login_wrap .sign_in_contents #sign_in_frm .login_status #login_y { 
+    /* input checkbox 또는 radio는 디자인을 다양하게 할 수 없기 때문에 
+    태그는 준비하되 CSS 디자인 결과에서 보이지 않도록 숨겨두고
+    별도로 이미지를 준비해서 디자인한다. */
+    display: none;}
+body #login_wrap .sign_in_contents #sign_in_frm .login_status #login_y:checked+span{
+    /* 체크박스가 선택 됐을 때 (활성화)*/
+    background-image: url(../image/check_on.svg);
+}
+body #login_wrap .sign_in_contents #sign_in_frm .login_status label{
+    transform: translateY(-7px);
+    display: inline-block;
+}
+ /* 로그인 틀릴떄 */
+body #login_wrap .sign_in_contents #sign_in_frm .login_status label {color: #fff;} /* 로그인 틀릴때 label */
+body #login_wrap .sign_in_contents #sign_in_frm .btn_forget {} /* 패스워드 잊음 버튼 */
+body #login_wrap .sign_in_contents #sign_in_frm .btn_forget #sign_in_btn {
+    color: #fff;
+    background-color: #1ED760; width: 100%; padding: 28.5px 0 ;
+    border-radius: 36.5px;
+    margin: 0 0 14px 0;
+} /* 로그인 버튼 */
+body #login_wrap .sign_in_contents #sign_in_frm .btn_forget p .forget_pw {
+    color: #fff;
+    text-align: center;
+    display: block;
+} /* forget-password? */
+
+/* SIGN UP */
+body #login_wrap .sign_up_contents {} /* SIGN UP tab 열렸을때 */

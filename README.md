@@ -375,3 +375,23 @@ padding or margin : 1px 2px -> 상하 1px, 좌우 2px
 padding or margin : 1px 0 2px -> 상 1px, 좌우 0px, 하 2px
 
 # Margin 겹침현상 주의
+
+## '<input type="">
+1) type=text : 입력요소 / name (데이터구분용) / valuse (초기값)
+2) type=checkbox : 입력요소 / name (그룹용) / valuse (데이터 구분용)
+3) 선택요소 종류 : checkbox, radio, select, option
+4) 데이터 구분용은 id처럼 해당 데이터만을 구분하는 중복되지 않는 이름을 설정한다.
+5) 그룹용은 클래스와 같이 2개 이상의 요소를 묶어주는 반복이름 개념으로 사용한다
+
+## background 관련 CSS 속성
+background-image:url(https://i.pinimg.com/736x/55/b8/ac/55b8ace3f6165177b2f737d45101dcb4.jpg);
+background-position: center 0; background 위지 조정, X와 Y값 작성으로 이루어 진다.
+background-repeat: no-repeat; background 사진 반복성을 설정하는 속성
+background-size: 500px auto : x와 y값 작성으로 이루어 지며, px, %, auto 등 다양한 단위가 쓰인다.
+background-size: contain : 사진이 잘리지 않도록 화면안에 이미지를 포함시키도록 채운다
+background-size: cover : 사진이 잘리더라도 배경을 전부 덮음.
+
+<!-- 배경 이미지 통합 (특정 대상에 대한 선택자가 1개일때.) -->
+## background: color image repeat attachment position
+background 속성을 전부 통합한 것으로
+색, 이미지, 반복, 부착여부, 포지션 총 5개 값으로 이루어진다.
