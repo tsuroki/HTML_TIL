@@ -34,10 +34,13 @@ body {
 #wrap #join_frm {
 } /* 가입 양식 전체 틀 */
 #wrap #join_frm .user_info {
+    margin: 0 0 54px;
+    overflow: hidden;
 } /* 가입 양식 리스트 */
 #wrap #join_frm .user_info dt {
     width: 120px; 
-    display: inline-block;
+    float: left; clear: both;
+    /* display: inline-block;  *//* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
     /* 인라인 블록은 기본 margin을 2~3px 내장 */
 } 
 
@@ -46,13 +49,18 @@ body {
     font-weight: 600; color: #f00;
 } /* 가입 양식 제목 em 2-1~9 */
 #wrap #join_frm .user_info dd {
-    width: 300px; display: inline-block ;
-    margin: 0 0 10px; 
+    float: left;
+    width: 300px; /* display: inline-block  */;/* !!!!!!!!!!!!!!!!!! */
+    margin: 0 0 11px;
+}
+#wrap #join_frm .user_info dd:nth-last-child(2) {
+    margin: 0px;
 } /* 가입 양식 내용 */
 #wrap #join_frm .user_info dd:nth-child(23) {text-align: center;}
 #wrap #join_frm .user_info dd:nth-child(3n) {
     background-color: aquamarine;
-    width : 120px; display: inline-block;}
+    float: right;
+    width : 120px; /* display: inline-block; */}/* !!!!!!!!!!!!!!!!!!!!!!!!!! */
 /* 가입 양식 내용 */
 /* 공통 클래스 2-1~2-7 */
 #wrap #join_frm .user_info dd .input_de {padding: 10px; 
@@ -95,16 +103,18 @@ background-color: #fff;
     /* background-image: url(../image/arrow_drop_down.png) ;
     background-repeat: no-repeat;
     background-position: 30px 10px; */
-    background: #fff url(../image/arrow_drop_down.png) no-repeat 27px 10px;
-    width: 50px; padding: 13px;
+    background: #fff url(../image/arrow_drop_down.png) no-repeat 27px 12px;
+    width: 50px; padding: 13.3px;
     font-size: 0.75rem;
     border: 1px solid #aaa;
     border-radius: 5px;
+    transform: translateY(px);
+    float: left;
 
 } /* agency */
 #wrap #join_frm .user_info dd #agency option {} /* option */
 #wrap #join_frm .user_info dd #phone_num {
-    width: 245px;
+    width: 245px; float:right;
 } /* option */
 #wrap #join_frm .user_info dd button {} /* option */
 #wrap #join_frm .user_info dd #certified_btn {
@@ -161,7 +171,8 @@ background-color: #fff;
 } /* 생일 공통 클래스 */
 #wrap #join_frm .user_info dd #year {}
 #wrap #join_frm .user_info dd #month {}
-#wrap #join_frm .user_info dd #day {}
+#wrap #join_frm .user_info dd #day {
+}
 
 /* 3-------------------------------------------가입버튼 */ /* 1 */
 #wrap #join_frm #join_btn {
@@ -170,7 +181,7 @@ background-color: #fff;
     background-color: #9e00b7;
     border-radius: 10px;
     color: #fff;
-    margin: 54px auto 0;
+    margin: 0 auto 0;
     display: block
 }
 /* 가입버튼 */
