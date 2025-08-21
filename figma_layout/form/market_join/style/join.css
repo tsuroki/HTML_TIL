@@ -61,7 +61,9 @@ body {
     float: right;
     width : 120px; /* display: inline-block; */}/* !!!!!!!!!!!!!!!!!!!!!!!!!! */
 /* 가입 양식 내용 */
+/* wrap #join_frm .btn */
 /* 공통 클래스 2-1~2-7 */
+#wrap #join_frm .user_info dd .input_de:focus {border: #9E00B7 1px solid;} 
 #wrap #join_frm .user_info dd .input_de {padding: 10px; 
     border-radius: 5px; border: #aaa solid 1px;
     width: 100%;
@@ -74,9 +76,13 @@ body {
 #wrap #join_frm .user_info dd #id_overlap_btn {
     font-size: 0.875rem;
     width : 120px; height: 40px; padding: 10px 0;
-    background-color: #9e00b7 ;
+    background-color: #aaa ;
     color: #fff;
     border-radius: 5px;
+}
+#wrap #join_frm .user_info dd #id_overlap_btn:hover {
+    background-color: #9E00B7 !important ;
+    color: #fff;
 }
 /* 2-2---------------------------------비밀번호 */ /* 2 */
 #wrap #join_frm .user_info dd #pw {}
@@ -89,9 +95,13 @@ body {
 #wrap #join_frm .user_info dd #email_overlap_btn {
     font-size: 0.875rem;
     width : 120px; height: 40px; padding: 10px 0;
-    background-color: #9e00b7 ;
+    background-color: #aaa ;
     color: #fff;
     border-radius: 5px;
+}
+#wrap #join_frm .user_info dd #email_overlap_btn:hover{
+    background-color: #9E00B7 !important ;
+    color: #fff;
 }
 /* 2-6----------------------------------------휴대폰*/ /* 5 */
 /* 2-6----------------------------------------휴대폰*/ /* 5 */
@@ -108,25 +118,28 @@ background-color: #fff;
     border: 1px solid #aaa;
     border-radius: 5px;
     transform: translateY(px);
-    float: left;
-
-} /* agency */
+    float: left;} /* agency */
 #wrap #join_frm .user_info dd #agency option {} /* option */
 #wrap #join_frm .user_info dd #phone_num {
     width: 245px; float:right;
 } /* option */
 #wrap #join_frm .user_info dd button {} /* option */
+#wrap #join_frm .user_info dd #certified_btn:hover{
+    background-color: #9E00B7 !important ; color: #fff;}
 #wrap #join_frm .user_info dd #certified_btn {
     font-size: 0.875rem;
     width : 120px; height: 40px; padding: 10px 0;
     background-color: #ccc ;
     color: #fff;
-    border-radius: 5px;
-} /* option */
+    border-radius: 5px;}
+ /* option */
 /* 2-7----------------------------------------주소*/ /* 2 */
+#wrap #join_frm .user_info dd .adr_search:hover{
+    border: solid #9E00B7 1px !important;
+}
 #wrap #join_frm .user_info dd .adr_search {
     text-align: center; display: block; font-size: 0.875rem;
-    padding: 10px; background-color: #fff; border: #9E00B7 1px solid;
+    padding: 10px; background-color: #fff; border: #aaa 1px solid;
     border-radius: 5px; margin: 0 0 10px;
 }
 #wrap #join_frm .user_info dd p {
@@ -156,7 +169,7 @@ background-color: #fff;
 #wrap #join_frm .user_info dd #none {}
 #wrap #join_frm .user_info dd:nth-child(23){margin-bottom: 25px;}
 /* 2-9-----------------------------------------생년월일*/ /* 5 */
-#wrap #join_frm .user_info dd:nth-child(26) {
+#wrap #join_frm .user_info dd:nth-child(26):hover {border: #9E00B7 solid 1px !important; ;
     background:#fff;
     font-size: 0.875rem;
     text-align: center;
@@ -165,6 +178,7 @@ background-color: #fff;
     padding : 10px 0;
 }
 #wrap #join_frm .user_info dd > span {margin: 0 15px;}
+#wrap #join_frm .user_info dd .birthday:focus{border: solid 1px #9E00B7;}
 #wrap #join_frm .user_info dd .birthday {
     width:50px; text-align: center;
 } /* 생일 공통 클래스 */

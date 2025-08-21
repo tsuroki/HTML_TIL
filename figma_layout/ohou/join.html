@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/join.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <title>회원가입 | 오늘의 집</title>
+</head>
+<body>
+    <div id="wrap">
+        <h1><a href="./index.html"><img src="./images/logo.png" alt="오늘의 집"></a></h1>
+        <h1>회원가입</h1>
+        <p>SNS계정으로 간편하게 회원가입</p>
+        <div id="icon">
+            <a href="#" class="icon_fb"><img src="./images/facebook.png" alt="페이스북 아이디로 회원가입"></a>
+            <a href="#" class="icon_kakao"><img src="./images/kakao.png" alt="카카오 아이디로 회원가입"></a>
+            <a href="#" class="icon_naver"><img src="./images/naver.png" alt="네이버 아이디로 회원가입"></a>
+        </div>
+        <form action="#" method="post" id="join_frm">
+            <fieldset class="info">
+                <dl class="submit_frm">
+                    <dt>이메일</dt>
+                    <dd>
+                        <input maxlength="20" type="text" name="user_id" id="user_id" class="input_de" placeholder="이메일">
+                        <span>@</span>
+                        <select name="email" id="email">
+                            <option value="gmail">gmail.com</option>
+                            <option value="naver">naver.com</option>
+                            <option value="daum">daum.net</option>
+                            <option value="hanmail">hanmail.net</option>
+                            <option value="nate">nate.com</option>
+                        </select>
+                        <p><button type="button" id="comfirm">이메일 인증하기</button></p>
+                    </dd>
+                    <dt>비밀번호</dt>
+                    <dd>
+                        <p>영문,숫자를 포함한 8자 이상의 비밀번호를 입력해주세요</p>
+                        <input maxlength="20" type="password" name="user_pw" id="user_pw" class="id_pw" placeholder="비밀번호">
+                    </dd>
+                    <dt>비밀번호 확인</dt>
+                    <dd>
+                        <input maxlength="20" type="password" name="user_pw_repeat" id="user_pw-repeat" class="id_pw" placeholder="비밀번호 확인">
+                    </dd>
+                </dl>
+            </fieldset>
+            <fieldset>
+                <legend id="agreement">약관동의</legend>
+                <dl>
+                    <dt id="agree_all">전체동의</dt>
+                    <dd>만 14세 이상입니다.<em>필수</em></dd>
+                    <dd>만 14세 이상입니다.<em>필수</em></dd>
+                    <dd>만 14세 이상입니다.<em>필수</em></dd>
+                </dl>
+            </fieldset>
+            <p><button type="submit" id=""login_button>회원가입하기</button></p>
+            <p>이미 아이디가 있으신가요?<a href="./join.html">로그인</a></p>
+        </form>
+</body>
+</html>

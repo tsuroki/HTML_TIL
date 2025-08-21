@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./figma_layout/styles/reset.css">
+    <title>CSS 통합 연습</title>
+    <style>
+        body {background: #2A7B9B;
+            background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 100%);}
+        #wrap {}
+        #wrap h1:nth-child(3){
+            clear:both;
+        }
+        #wrap h1:nth-child(1) {color: blue; font-size: 3rem;}
+        #wrap h1:nth-of-type(2){color: red; font-size: 3rem;}
+        #wrap h1:nth-child(3) {background: darkcyan;}
+        /* #wrap .list:nth-child(2) li:nth-child(1) {background: darkcyan;} */ /* 1안 */
+        /* #wrap .ist:nth-of-type(1) li:nth-child(1) {background: darkcyan;} */ /* 2안 */
+        #wrap .list:nth-of-type(1) li:first-child{border:2px solid black}
+        #wrap .list:nth-of-type(2) {border: 3px dashed blue; width: 100;}
+        #wrap .list:nth-child(2) {border:3px solid red; width: 100%;}
+        #wrap .list:nth-child(2) li:last-child {border: 1px solid orange;}
+        #wrap .list:nth-child(4) li:last-child a {border: 2px solid orange; color: red;}
+        #wrap .list li a {font-size: 2rem;}
+        #wrap .list li {float: left;}
+        #wrap .list li:nth-child(even) {border-bottom: 4px solid purple;}
+        #wrap .list:last-child li:nth-child(3n+1) {background-color: coral;} */
+        /* #wrap .list:last-child li:nth-child(3n-1) {background-color: coral;}
+        #wrap .list:last-child li:nth-child(3n) {background-color: red;} */
+        /* #wrap .list:last-child li:nth-child(4n-1) {background-color: red;} */
+        section {}
+        section #btn1:hover {background:#222;}
+        section .link1:hover {background:#f6f6f6;}
+        section input {border:3px solid #f6f6f6;}
+        section input:focus {border : 3px solid green;}
+        section #btnl, section .link1 {} /* 그룹 */
+        section > * {
+            font-size: 3rem;
+            padding: 10px;
+            margin: 4px;
+            background:#ccc
+        } /* 모든 (*) 자식(>) 선택자 */
+        section #btn1 {clear: both;float: left;}
+        section .link1 {float: left;}
+        section input {float: left;}
+        body *::selection {background-color: yellow;}
+        /* 가상선택자 */
+        article {clear:both;float: left;}
+        article a {}
+        article a:nth-child(2) {background-color: yellow;}
+        article a:nth-child(2)::before {
+            content: '';
+            display: inline-block;
+            width: 2px ;height: 12px;
+            background: #000;
+            margin: 0 4px;
+        }
+        article a:nth-child(2)::after {
+            content: '';
+            display: inline-block;
+            width: 2px; height: 12px;
+            background: #000;
+            margin: 0 4px
+        }
+        .mobile {
+            width:430px; height:932px;
+            margin:100px auto;
+            background:url(https://i.pinimg.com/1200x/a8/8c/76/a88c767109580d80b7502f2887e0f38b.jpg)
+            center / cover;
+            
+            ;
+        }
+        .mobile::after{
+            content: ''; display : block;
+            width:100% ; height: 100%; /* 부모 모두 채우기 */
+            /* background: rgba(255,0,0,0.2); */
+            background: linear-gradient(rgba(255,0,0,0.5), rgba(0,255,255,0.5));
+        }
+        /* 쇼핑몰 검색 필터 */
+        #search_frm {}
+        #search_frm #user_name {}
+        #search_frm #user_soize {}
+        #search_frm #user_color {}
+        #search_frm #search {}
+        /* 속성 선택자 */
+        /* #search_frm input[type="text"] {background:yellow} */
+        /* #search_frm input[type^=te]{background:yellow} */
+        /*  #search_frm input[name^=user]{background:gray}
+        #search_frm input[type$=xt] {background:black} */
+        #search_frm input[name*=_] {background:skyblue}
+        </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>CSS 공부</h1>
+        <ul class="list">
+            <li><a href="#">1번 링크</a></li>
+            <li><a href="#">2번 링크</a></li>
+            <li><a href="#">3번 링크</a></li>
+            <li><a href="#">4번 링크</a></li>
+        </ul>
+        <h1>CSS 공부</h1>
+        <ul class="list">
+            <li><a href="#">1번 링크</a></li>
+            <li><a href="#">2번 링크</a></li>
+            <li><a href="#">3번 링크</a></li>
+            <li><a href="#">4번 링크</a></li>
+            <li><a href="#">5번 링크</a></li>
+            <li><a href="#">6번 링크</a></li>
+            <li><a href="#">7번 링크</a></li>
+            <li><a href="#">8번 링크</a></li>
+        </ul>
+    </div>
+    <section>
+        <button type="button" id="btn1">확인</button>
+        <a href="#" class="link1">바로가기</a>
+        <input type="text" maxlength="5" id="id" class="typing" placeholder="아이디입력">
+    </section>
+    <article>
+        <a href="">아이디 찾기</a>
+        <a href="">비밀번호 찾기</a>
+        <a href="">회원가입</a>
+    </article>
+    <div class="mobile">
+    </div>
+    <form action="#" method="get" id="search_frm">
+        <input type="text" name="user_name" id="user_name" placeholder="상품명">
+        <input type="text" name="user_size" id="user_size" placeholder="사이즈">
+        <input type="text" name="user_color" id="user_color" placeholder="색상">
+        <button type="button" id="search">검색</button>
+    </form>
+</body>
+</html>
