@@ -58,7 +58,6 @@ body {
 } /* 가입 양식 내용 */
 #wrap #join_frm .user_info dd:nth-child(23) {text-align: center;}
 #wrap #join_frm .user_info dd:nth-child(3n) {
-    background-color: aquamarine;
     float: right;
     width : 120px; /* display: inline-block; */}/* !!!!!!!!!!!!!!!!!!!!!!!!!! */
 /* 가입 양식 내용 */
