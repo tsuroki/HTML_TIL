@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="keywords" content="">
+    <link rel="stylesheet" href="./styles/common.css">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/login.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -22,18 +23,21 @@
             <a href="#" class="icon_naver"><img src="./images/naver.png" alt="네이버"></a>
         </div>
         <form action="#" method="post" id="login_frm">
-            <dl class="info">
-                <dt>아이디</dt>
-                <dd>
-                    <input maxlength="20" type="text" name="user_id" id="user_id" class="id_pw" placeholder="아이디">
-                </dd>
-                <dt>비밀번호</dt>
-                <dd>
-                    <input maxlength="20" type="password" name="user_pw" id="user_pw" class="id_pw" placeholder="비밀번호">
-                </dd>
-            </dl>
-            <p><button type="submit" id=""login_button>로그인</button></p>
-            <p>아이디가 없으신가요?<a href="./join.html">회원가입</a></p>
+            <fieldset class="form">
+                <dl class="info">
+                    <dt>아이디</dt>
+                    <dd>
+                        <input maxlength="20" type="text" name="user_id" id="user_id" class="id_pw" placeholder="아이디">
+                    </dd>
+                    <dt>비밀번호</dt>
+                    <dd>
+                        <input maxlength="20" type="password" name="user_pw" id="user_pw" class="id_pw" placeholder="비밀번호">
+                    </dd>
+                </dl>
+            </fieldset>
+            <button type="submit" id="login_btn">로그인</button>
+            <p>아이디가 없으신가요? <a href="./join.html">회원가입</a></p>
         </form>
+    </div>
 </body>
 </html>

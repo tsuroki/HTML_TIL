@@ -1,1 +1,6 @@
 #wrap {}
+#wrap .link_g{}
+#wrap .link_g .login{
+    margin-bottom: 22px;
+}
+#wrap .link_g .join{}

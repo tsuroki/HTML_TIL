@@ -1,0 +1,166 @@
+#wrap #icon {
+    margin-top: 14px;
+    text-align: center;
+}
+#wrap #icon a {}
+#wrap #icon a:first-child, #wrap #icon a:nth-child(2) {margin-right: 20px}
+#wrap #icon a img {} /* 아이콘 이미지 */
+
+/* ====================가입정보================== */
+#wrap #join_frm {
+} /* 가입 정보 */
+#wrap #join_frm .contents {} /*.contents */
+#wrap #join_frm .contents dl {} /*.contents dl값 */
+#wrap #join_frm .contents dl dt {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 1.0625rem;
+}
+#wrap #join_frm .contents dl dd {
+} /* 공통 dd값 */
+#wrap #join_frm .contents dl dd:nth-child(3n) {
+    margin-bottom:22px;
+} /* 공통 dd값 */
+#wrap #join_frm .contents dl dd input[id^=user] {
+    padding: 10px;
+    border : 1px solid #ddd;
+    border-radius: 3px;
+    
+} /* 공통 dd값 */
+
+#wrap #join_frm .contents dl dd .input_de {
+    width: 100%;
+}/* input 공통 클라스 */
+
+#wrap #join_frm .contents dl dd #user_id {
+    width: 190px;
+    float: left;
+    height: 46px;
+}/* input 공통 클라스 */
+
+#wrap #join_frm .contents dl dd span {
+    float:left;
+    margin-left: 2px;
+    transform: translateY(14px);
+} /* @ */
+
+/* 이메일 */
+
+#wrap #join_frm .contents dl dd #adr {
+    width: 190px;
+    height: 46px;
+    float: right;
+    padding-left: 10px;
+    border : 1px solid #ddd;
+    border-radius: 3px;
+    background:#fff url(../images/arrow_drop_down.png) no-repeat 98% center;
+    margin-bottom: 10px;
+} /* 이메일 select */
+#wrap #join_frm .contents dl dd select option {} /* 이메일 select 옵션 */
+#wrap #join_frm .contents dl dd button {
+    width: 100%;
+    padding: 10px;
+    border : 1px solid #ddd;
+    background: #f5f5f5;
+    border-radius: 3px;
+} /* 이메일 인증버튼 */
+
+/* 비밀번호 */
+#wrap #join_frm .contents dl dd p { 
+    color: #777;
+    font-size: 0.875rem;
+    margin-bottom: 10px;
+}
+#wrap #join_frm .contents dl dd #user_pw {}
+
+/* 비밀번호 확인 */
+#wrap #join_frm .contents dl dd p {}
+#wrap #join_frm .contents dl dd #user_pw {}
+
+/* 닉네임 */
+#wrap #join_frm .contents dl dd #user_nick {}
+
+/* ====================가입정보================== */
+#wrap #join_frm .law {}
+#wrap #join_frm .law dl {}
+#wrap #join_frm .law dl dt {margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 1.0625rem;
+}
+#wrap #join_frm .law dl dd {
+    border: #d9d9d9 1px solid;
+    border-radius: 3px;
+    padding: 10px;
+}
+#wrap #join_frm .law dl dd ul{
+}
+#wrap #join_frm .law dl dd ul li{
+    margin-bottom: 10px;
+}
+#wrap #join_frm .law dl dd ul li:last-child{
+    margin-bottom: 0px;
+}
+/* 전체동의 1행 */
+#wrap #join_frm .law dl dd ul li:first-child {
+    border-bottom: 1px #eee solid;
+    padding-bottom: 7.5px;
+}
+#wrap #join_frm .law dl dd ul li:first-child #chk_all {
+    
+}
+#wrap #join_frm .law dl dd ul li:first-child #chk_all label {
+}
+#wrap #join_frm .law dl dd ul li:first-child #chk_all label em {}
+/* 개별동의 2~6행 통합 */
+
+#wrap #join_frm .law dl dd ul li input[name*=agree] {
+    display: none;
+}
+
+#wrap #join_frm .law dl dd ul li label{
+    font-size: 0.8125rem;
+    background: url(../images/check_box_n.png) no-repeat;
+    padding-left: 34px; line-height: 24px;  display: inline-block;
+}
+#wrap #join_frm .law dl dd ul li input:checked+label{
+    background: url(../images/check_box_y.png) no-repeat;
+}
+
+#wrap #join_frm .law dl dd ul li:first-child label {
+    font-size: 1.0625rem;
+} /* li중 1번만 font-size 재 부여 */
+#wrap #join_frm .law dl dd ul li:first-child label em {
+    margin-left: 5px;
+    font-size: 0.875rem;
+    color: #777;
+} /* li중 1번의 em에 font-size 부여 */
+#wrap #join_frm .law dl dd ul li label em {}
+#wrap #join_frm .law dl dd ul li label .essential {
+    color: #3292FF; font-size: 0.813rem;
+}
+#wrap #join_frm .law dl dd ul li label .choice {
+    color: #777; font-size: 0.75rem;
+}
+#wrap #join_frm .law dl dd ul li .more {
+    float: right; clear: both;
+    transform: translateY(4px);
+}
+#wrap #join_frm .law dl dd ul li .more img {
+    width: 14px; height: 14px;
+}
+/* ====================가입정보================== */
+
+#wrap #join_frm > button {
+    margin: 22px 0px;
+    padding: 15px;
+}
+
+#wrap #join_frm > p {
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+#wrap #join_frm > p a{
+    font-weight: 600;
+    text-decoration: underline;
+}
