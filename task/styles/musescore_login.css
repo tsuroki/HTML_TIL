@@ -4,7 +4,6 @@ body {
 }
 
 #wrap {
-    text-align: center;
     background-color: white;
     width: 320px;
     padding-top: 24px;
@@ -29,8 +28,12 @@ body {
 /* login with sns */
 #wrap #sns {
     width : 100%;
+    text-align: center;
+    padding-bottom: 31px;
+    border-bottom: 1px solid #e9e7ec;
 } /* div */
 #wrap #sns a {margin-right: 8px;} /* sns a link */
+
 #wrap #sns a:last-child {
     margin-right: 0px;
 } /* sns a link */
@@ -42,54 +45,80 @@ body {
 
 #wrap #sns a .icon {} /* class icon */
 
-#wrap #sns #google {
-    padding: 5px;
+#wrap #sns a #google {
+    padding: 5px 5px 5px;
     background-color: #6b5dfe;
     border-radius: 21px;
+    height: 42px;
+    display: inline-block;
+    transform: translateY(-7px);
 }
 
-#wrap #sns #google img {
+#wrap #sns a #google img {
     background-color: white;
     border-radius: 15px;
-    transform: translateY(8px);
     display: inline-block;
 } /* google */
-#wrap #sns #google span {
-    width: 100%;
+
+#wrap #sns a #google .text {
     font-weight: 500;
-    line-height: 30px;
     font-size: 0.875rem;
-    display: inline;
+    color: #fff;
+    margin-bottom:21px;
+    transform: translateY(-10px);
+    display: inline-block;
 } /* google span*/
 
-#wrap #sns #fb {
-    background-color: #fff;
+#wrap #sns a #fb {
     border: 1px solid rgba(108, 93, 255, 0.1);
-    padding: 6px 9px;
     border-radius: 21px;
+    width: 48px; height: 42px;
+    background: #fff url(../images/fb-login.svg) no-repeat center;
+    display: inline-block;
 } /* a facebook */
-#wrap #sns #fb img {
-    width: 30px; height: 30px;
+#wrap #sns a img {
 } /* a facebook img */
 
-#wrap #sns #apple {background-color: #fff;
+#wrap #sns a #apple {background-color: #fff;
     border: 1px solid rgba(108, 93, 255, 0.1);
     border-radius: 21px;
-    width: 42px; height: 48px;
-    background: #fff;} /* a apple img */ /* a apple */
+    width: 48px; height: 42px;
+    background: #fff;
+    background-image: url(../images/apple-login.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+
+} /* a apple img */ /* a apple */
 #wrap #sns #apple img {
-    width: 30px;
-    height: 30px;
+}
+
+/* or */
+#wrap #or {
+    text-align: center;
+    height: 0px;
+    margin-bottom: 20px;
+}
+
+#wrap #or span{
+    padding: 12px;
+    background-color: #fff;
+    transform: translateY(-21px);
+    display: inline-block;;
 }
 
 /* form */
 #wrap #login_frm
 #wrap #login_frm dl {} /* dl */
-#wrap #login_frm dl dt {} /* dl title */
+#wrap #login_frm dl dt {
+    margin-bottom: 4px;
+} /* dl title */
 #wrap #login_frm dl dt a {} /* dl find password link */
 #wrap #login_frm dl dt a span{} /* forgot password */
 #wrap #login_frm dl dd {} /* dl data */
 #wrap #login_frm dl dd #email {} /* dl email */
 #wrap #login_frm dl dd #pw {} /* dl pw */
-#wrap #login_frm dl dd #input_de {} /* dl input */
+#wrap #login_frm dl dd #input_de {
+    border:1px solid #A7A5A9;
+} /* dl input */
 #wrap #login_frm dl #login_btn {} /* dl */

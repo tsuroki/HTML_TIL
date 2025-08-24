@@ -18,15 +18,23 @@
             <p>Don't have an account?<a href="#">Sign Up</a></p>
         </header>
         <div id="sns">
-            <a href="#" id="google">
-                <span><img src="./images/google-login.png" alt="">Continue with Google</span>
+            <a href="#" >
+                <div id="google" class="img">
+                    <img src="./images/google-login.png" alt="">
+                    <span class="text">Continue with Google</span>
+                </div>
             </a>
-            <a href="#" id="fb" class="icon">
-                <img src="./images/fb-login.svg" alt="login_with_facebook">
+            <a href="#">
+                <span id="fb" class="img"></span>
             </a>
-            <a href="#" id="apple" class="icon">
-                <img src="./images/apple-login.svg" alt="login_with_apple">
+            <a href="#">
+                <span  id="apple" class="img"></span>
             </a>
+        </div>
+        <div id="or">
+            <span>
+                or
+            </span>
         </div>
         <form action="#" method="post" id="login_frm:">
             <dl>
@@ -37,7 +45,7 @@
                     <input type="text" name="email" id="email" class="input_de">
                 </dd>
                 <dt>
-                    Email or username
+                    Password
                     <a href="#"><span>forgot your password?</span></a>
                 </dt>
                 <dd>
