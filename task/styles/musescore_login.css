@@ -1,0 +1,95 @@
+/* Log in to Musescore */
+body {
+    background-color: black;
+}
+
+#wrap {
+    text-align: center;
+    background-color: white;
+    width: 320px;
+    padding-top: 24px;
+    margin: 0 auto;
+    color: #180036;
+}
+
+/* header */
+#wrap #title {margin-bottom: 24px;
+}
+#wrap #title h1 {
+    font-weight: 600;
+    font-size: 2.125rem;
+    margin-bottom: 4px}
+#wrap #title p {
+    font-size: 0.875rem;
+}
+#wrap #title p a {
+    color: #6b5dfe;
+}
+
+/* login with sns */
+#wrap #sns {
+    width : 100%;
+} /* div */
+#wrap #sns a {margin-right: 8px;} /* sns a link */
+#wrap #sns a:last-child {
+    margin-right: 0px;
+} /* sns a link */
+
+#wrap #sns a img {
+    width: 30px;
+    height: 30px;
+} /* class icon */
+
+#wrap #sns a .icon {} /* class icon */
+
+#wrap #sns #google {
+    padding: 5px;
+    background-color: #6b5dfe;
+    border-radius: 21px;
+}
+
+#wrap #sns #google img {
+    background-color: white;
+    border-radius: 15px;
+    transform: translateY(8px);
+    display: inline-block;
+} /* google */
+#wrap #sns #google span {
+    width: 100%;
+    font-weight: 500;
+    line-height: 30px;
+    font-size: 0.875rem;
+    display: inline;
+} /* google span*/
+
+#wrap #sns #fb {
+    background-color: #fff;
+    border: 1px solid rgba(108, 93, 255, 0.1);
+    padding: 6px 9px;
+    border-radius: 21px;
+} /* a facebook */
+#wrap #sns #fb img {
+    width: 30px; height: 30px;
+} /* a facebook img */
+
+#wrap #sns #apple {background-color: #fff;
+    border: 1px solid rgba(108, 93, 255, 0.1);
+    border-radius: 21px;
+    width: 42px; height: 48px;
+    background: #fff;} /* a apple img */ /* a apple */
+#wrap #sns #apple img {
+    width: 30px;
+    height: 30px;
+}
+
+/* form */
+#wrap #login_frm
+#wrap #login_frm dl {} /* dl */
+#wrap #login_frm dl dt {} /* dl title */
+#wrap #login_frm dl dt a {} /* dl find password link */
+#wrap #login_frm dl dt a span{} /* forgot password */
+#wrap #login_frm dl dd {} /* dl data */
+#wrap #login_frm dl dd #email {} /* dl email */
+#wrap #login_frm dl dd #pw {} /* dl pw */
+#wrap #login_frm dl dd #input_de {} /* dl input */
+#wrap #login_frm dl #login_btn {} /* dl */
