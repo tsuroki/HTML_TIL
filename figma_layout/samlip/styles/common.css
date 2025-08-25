@@ -1,0 +1,67 @@
+/* CSS 변수 -> 한 값당 하나.*/
+:root {
+    --text-title70:4.375rem;/* 70px 대제목 */
+    --text-contents21:1.313rem; /* 21px 내용 */
+    --text-menu18 : 1.125rem; /* 18px 주 메뉴 */
+    --text-sub12:0.75rem; /* 12px 서브메뉴 */
+/* --대상-용도:반복속성값; */
+
+/* 행간 */
+    --line-title90:90%;
+    --line-contents:150%;
+    --line-menu:100%;
+    --line-submenu:100%;
+
+/* 자간 */
+    --letter-common:-0.02rem;
+
+/* 굵기 */
+--weight-title:700;
+--weight-contents:400;
+--weight-menu:400;
+--weight-submenu:400;
+
+/* 색상 */
+    --color-white:#fff;
+    --color-gray4:#444;
+    --color-graya:#aaa;
+    --color-title_brown:#642c10;
+    --color-title_indigo:#1d365d;
+    --color-title_coral:#d43936;
+    /* 레이아웃 정보 */
+    --width-desktop:1440px;
+    --margin-desktop-l-r-80:80px
+}
+
+
+
+/* 전체 body */
+body {}
+
+
+/* logo */
+#warp {}
+#warp header div nav {}
+#warp header #spc {}
+#warp header #spc h1 {}
+#warp header #spc h1 a {}
+#warp header #spc h1 img {}
+
+/* nav */
+#warp header #spc #gnb  {}
+#warp header #spc #gnb>li {}
+#warp header #spc #gnb>li>a {
+    font-size:var(--text-menu18);
+}
+
+
+/*  right manu  */
+#wrap header #spc #right_menu {}
+#wrap header #spc #right_menu > li {}
+
+#wrap header #spc #right_menu > li > a {
+    font-size:var(--text-sub12);
+}
+
+#wrap header #spc #right_menu > li > #lang {}
+#wrap header #spc #right_menu > li > #search_bar {}

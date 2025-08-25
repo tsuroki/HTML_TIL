@@ -1,0 +1,79 @@
+/* #wrap main */
+#wrap main {}
+#wrap main div {}
+#wrap main div>section{
+    background-size: cover;
+}
+#wrap main div>section>h2{
+    font-size: var(--text-title70);
+    font-weight: var(--weight-title);
+    letter-spacing: var(--letter-common);
+}
+
+/* 배너 1 */
+#wrap main div .bnr1 {
+    background-image: url(../image/row1_bnr1.jpg);
+    width: 1920px;
+    height: 850px;
+}
+#wrap main div .bnr1 h2 {
+    color: var(--color-white);
+    letter-spacing: var(--letter-common);
+}
+#wrap main div .bnr1 p {
+    color: var(--color-white);
+}
+
+/* 배너 2 */
+#wrap main div .bnr2 {
+    background-image: url(../image/row1_bnr2.jpg);
+    width: 1920px;
+    height: 850px;
+}
+#wrap main div .bnr2 h2 {
+    color: var(--color-title_brown);
+    letter-spacing: var(--letter-common);
+}
+#wrap main div .bnr2 p {
+    color: var(--color-title_brown);
+}
+
+/* 배너 3 */
+#wrap main div .bnr3 {
+    background-image: url(../image/row1_bnr3.jpg);
+    width: 1920px;
+    height: 850px;
+}
+#wrap main div .bnr3 h2 {
+    color: var(--color-title_indigo);
+    letter-spacing: var(--letter-common);
+}
+#wrap main div .bnr3 p {
+    color: var(--color-title_indigo);
+}
+
+/* 배너 4 */
+#wrap main div .bnr4 {
+    background-image:url(../image/row1_bnr4.jpg);
+    width: 1920px;
+    height: 850px;
+}
+#wrap main div .bnr4 h2 {
+    color: var(--color-title_coral);
+    letter-spacing: var(--letter-common);
+}
+#wrap main div .bnr4 p {
+    color: var(--color-title_coral);
+}
+
+/* 배너 5 */
+#wrap main div .bnr5 {
+    background-image: url(../image/row1_bnr5.jpg);
+    width: 1920px;
+    height: 850px;
+}
+#wrap main div .bnr5 h2 {
+    color:var(--color-title_indigo);
+    letter-spacing: var(--letter-common);
+}
+#wrap main div .bnr5 p {color:var(--color-title_indigo);}
