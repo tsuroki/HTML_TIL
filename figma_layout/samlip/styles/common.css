@@ -40,28 +40,75 @@ body {}
 
 
 /* logo */
-#warp {}
-#warp header div nav {}
-#warp header #spc {}
-#warp header #spc h1 {}
-#warp header #spc h1 a {}
-#warp header #spc h1 img {}
+#wrap {}
+#wrap header {
+    /* 선언 */
+    display: flex;
+    /* flex 방향은 어디서 시작하며 어떻게 가는가? */
+    flex-direction: row;
+    /* 줄바꿈이 되어있는가? ㄴ */
+    flex-wrap: nowrap;
+    /* 자식이 어떻게 나열시킬 것인가?: */
+    justify-content: space-between;
+    /* 교차축이 몇개인가? 1개 -> items / 축이 어떻게 정렬되어있는가? */
+    align-items: center;
+    background-color: aqua;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+#wrap header nav {
+    background-color: yellow;
+}
+#wrap header {}
+#wrap header h1 {}
+#wrap header h1 a {}
+#wrap header h1 img {}
 
 /* nav */
-#warp header #spc #gnb  {}
-#warp header #spc #gnb>li {}
-#warp header #spc #gnb>li>a {
+#wrap header #gnb  {
+    /* 선언 */
+    display: flex;
+    /* 축이 어느방향으로 옮겨갔는가? row로 / 줄바꿈은? no */
+    flex-flow: row nowrap;
+    gap: 70px;
+    /* 축 위의 아이템들이 어떻게 정렬되어 있는가? */
+    justify-content: space-between;
+    /* 아이템은 고정축에 어떻게 정렬되어있는가?*/
+    align-items: center;
+}
+#wrap header #gnb>li {}
+#wrap header #gnb>li>a {
     font-size:var(--text-menu18);
+    background: purple;
+    line-height: 92px;
+    display:block;
 }
 
 
 /*  right manu  */
-#wrap header #spc #right_menu {}
-#wrap header #spc #right_menu > li {}
+#wrap header #right_menu {
+    background-color: yellow;
+    display: flex;
+    /* 축이 어느방향으로 옮겨갔는가? row로 / 줄바꿈은? no */
+    flex-flow: row nowrap;
+    /* 축 위의 아이템들이 어떻게 정렬되어 있는가? */
+    justify-content: space-between;
+    /* 아이템은 고정축에 어떻게 정렬되어있는가?*/
+    align-items: center;
+    
+}
+#wrap header #right_menu > li {}
+#wrap header #right_menu > li:first-child:after {
+    content:''; display:block;
+    width:1px; height:13px; background:var(--color-graya);
+    text-align: right center; display: inline-block;
+    margin: 0px 40px;
+}
 
-#wrap header #spc #right_menu > li > a {
+#wrap header #right_menu > li > a {
     font-size:var(--text-sub12);
 }
 
-#wrap header #spc #right_menu > li > #lang {}
-#wrap header #spc #right_menu > li > #search_bar {}
+#wrap header #right_menu > li > #lang {}
+#wrap header #right_menu > li > #search_bar {margin: 0 0 0 40px;}
