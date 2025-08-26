@@ -1,114 +1,189 @@
-/* CSS 변수 -> 한 값당 하나.*/
+/* CSS 변수 */
 :root {
-    --text-title70:4.375rem;/* 70px 대제목 */
-    --text-contents21:1.313rem; /* 21px 내용 */
-    --text-menu18 : 1.125rem; /* 18px 주 메뉴 */
-    --text-sub12:0.75rem; /* 12px 서브메뉴 */
-/* --대상-용도:반복속성값; */
-
-/* 행간 */
-    --line-title90:90%;
-    --line-contents:150%;
-    --line-menu:100%;
-    --line-submenu:100%;
-
-/* 자간 */
-    --letter-common:-0.02rem;
-
-/* 굵기 */
---weight-title:700;
---weight-contents:400;
---weight-menu:400;
---weight-submenu:400;
-
-/* 색상 */
+    /* --대상-용도:반복속성값; */
+    /* 글자크기 */
+    --text-title70:4.375rem;
+    --text-contents21:1.313rem;
+    --text-menu18:1.125rem;
+    --text-sub12:0.75rem;
+    /* 행간 */
+    --line-title:0.9;
+    --line-contents:1.5;
+    /* 자간 */
+    --letter-minus2:-0.02rem;
+    /* 굵기 */
+    --weight-bold:700;
+    --weight-semibold:600;
+    /* 색상(테두리색, 배경색, 글자색 등) */
     --color-white:#fff;
     --color-gray4:#444;
     --color-graya:#aaa;
-    --color-title_brown:#642c10;
-    --color-title_indigo:#1d365d;
-    --color-title_coral:#d43936;
+    --color-title-brown:#642c10;
+    --color-title-indigo:#1d356d;
+    --color-title-coral:#d43936;
     /* 레이아웃 정보 */
     --width-desktop:1440px;
-    --margin-desktop-l-r-80:80px
+    --margin-desktop-l-r-80:80px;
 }
-
-
-
-/* 전체 body */
-body {}
-
-
-/* logo */
+/* header 포함 공통 */
 #wrap {}
 #wrap header {
-    /* 선언 */
-    display: flex;
-    /* flex 방향은 어디서 시작하며 어떻게 가는가? */
-    flex-direction: row;
-    /* 줄바꿈이 되어있는가? ㄴ */
-    flex-wrap: nowrap;
-    /* 자식이 어떻게 나열시킬 것인가?: */
-    justify-content: space-between;
-    /* 교차축이 몇개인가? 1개 -> items / 축이 어떻게 정렬되어있는가? */
-    align-items: center;
-    background-color: aqua;
-    padding-left: 80px;
-    padding-right: 80px;
+    /* background:aqua; */
+    /* width:100%; 블록의 기본값 생략가능 */
+    padding:0 80px;
+    height:92px;
+    display:flex;
+    flex-flow:row nowrap;/* 메인축(수평) 줄바꿈안함 */
+    justify-content: space-between; /* 메인축 정렬(양쪽끝) */
+    align-items:center;/* 교차축(수직) 가운데 */
+    position: relative; /* lnb 부모 크기+위치 기준 */
 }
-
-#wrap header nav {
-    background-color: yellow;
-}
-#wrap header {}
 #wrap header h1 {}
 #wrap header h1 a {}
-#wrap header h1 img {}
-
-/* nav */
-#wrap header #gnb  {
-    /* 선언 */
-    display: flex;
-    /* 축이 어느방향으로 옮겨갔는가? row로 / 줄바꿈은? no */
-    flex-flow: row nowrap;
-    gap: 70px;
-    /* 축 위의 아이템들이 어떻게 정렬되어 있는가? */
-    justify-content: space-between;
-    /* 아이템은 고정축에 어떻게 정렬되어있는가?*/
-    align-items: center;
+#wrap header h1 a img {}
+#wrap header nav {
+    /* background:lime; */
 }
-#wrap header #gnb>li {}
-#wrap header #gnb>li>a {
+#wrap header nav .gnb {
+    display:flex;/* 자식 li 정렬 위한 값 */
+    flex-flow:row nowrap;
+    gap:70px;
+}
+#wrap header nav .gnb > li {}
+#wrap header nav .gnb > li > ul.lnb {display: none;}
+#wrap header nav .gnb > li > a {
     font-size:var(--text-menu18);
-    background: purple;
-    line-height: 92px;
+    /* background:yellow; */
+    line-height:92px;
     display:block;
 }
 
-
-/*  right manu  */
-#wrap header #right_menu {
-    background-color: yellow;
+#wrap header nav .gnb > li:nth-child(3) > ul.lnb {
+    position: absolute;
+    z-index: 85;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    padding: 31px 0;
     display: flex;
-    /* 축이 어느방향으로 옮겨갔는가? row로 / 줄바꿈은? no */
     flex-flow: row nowrap;
-    /* 축 위의 아이템들이 어떻게 정렬되어 있는가? */
-    justify-content: space-between;
-    /* 아이템은 고정축에 어떻게 정렬되어있는가?*/
-    align-items: center;
-    
+    justify-content: center;
+    align-items: top;
+    gap:80px;
+    left:0 ;
+    top: 92px;
+    display: none;
 }
-#wrap header #right_menu > li {}
-#wrap header #right_menu > li:first-child:after {
+#wrap header nav .gnb > li:nth-child(3):hover > ul.lnb {
+    display: flex;
+}
+#wrap header nav .gnb > li:nth-child(3) > ul.lnb > li {
+    text-align: center;
+}
+#wrap header nav .gnb > li:nth-child(3) > ul.lnb > li > a {
+    margin-bottom: 15px;
+    display: inline-block;
+}
+#wrap header nav .gnb > li:nth-child(3) > ul.lnb > li > ul.lnb_dth2 {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 15px;
+}
+#wrap header nav .gnb > li:nth-child(3) > ul.lnb li:nth-child(1) {
+}
+#wrap header nav .gnb > li:nth-child(5) > ul.lnb {
+    /* display: none; */
+    position: absolute;
+    z-index: 90;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 100%; /* absolute와 함께 w100%가 있으면 relative 부모와의 너비와 같다 */
+    padding: 45px 0;
+     /* 시작점 */
+    display: flex;
+    left: 0;
+    top: 92px;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    display: none;
+}
+#wrap header nav .gnb > li:hover ul.lnb {
+    display: flex;
+}
+
+#wrap header nav .gnb > li > ul > li > a {
+    font-size: var(--text-menu18);
+    font-weight: var(--weight-semibold);
+}
+
+#wrap header .right_menu {/* 
+    background:yellow; */
+    display:flex; flex-flow:row nowrap;
+    align-items: center;
+}
+#wrap header .right_menu > li {}
+#wrap header .right_menu > li:first-child {
+    display:flex;/* customer와 구분선의 부모 */
+    flex-flow:row nowrap;
+}
+#wrap header .right_menu > li:first-child::after {
     content:''; display:block;
     width:1px; height:13px; background:var(--color-graya);
-    text-align: right center; display: inline-block;
-    margin: 0px 40px;
+    margin:0 40px;
 }
 
-#wrap header #right_menu > li > a {
+#wrap header .right_menu > li:nth-child(2) {margin-right: 40px;
+}
+#wrap header .right_menu > li > a {
     font-size:var(--text-sub12);
 }
+#wrap header .right_menu > li {
+    /* background-color: yellow; */
+    /* 형제 또는 부모와 겹치는 요소 -> position:absolute 필요 */
+}
 
-#wrap header #right_menu > li > #lang {}
-#wrap header #right_menu > li > #search_bar {margin: 0 0 0 40px;}
+#wrap header .right_menu > li:nth-child(2) {
+    position: relative;
+    /* 형제 또는 부모와 겹치는 요소 -> position:absolute 필요 */
+}
+
+#wrap header .right_menu > li:nth-child(2) .lang_sel {
+    /* background: #d43936; */
+    position: absolute; z-index:100; /* 0~999 */
+    height: 140px;
+    width: 40px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    display: none;
+    /* 초기 숨기기 */
+}
+
+#wrap header .right_menu > li:nth-child(2):hover .lang_sel{
+    display: flex;
+}
+
+#wrap header .right_menu > li:nth-child(2) .lang_sel a {
+    background-color: #fff;
+    width: 40px; height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border: #aaa 1px solid;
+    border-radius: 50%;
+    font-size: var(--text-sub12);
+}
+#wrap header .right_menu > li:nth-child(2) .lang_sel a.kr{
+    
+}
+#wrap header .right_menu > li:nth-child(2) .lang_sel a.en{
+    
+}
+#wrap header .right_menu > li:nth-child(2) .lang_sel a.cn{
+}
+/* 언어 선택시 활성화 디자인 */
+
+/* 메인 */
+#wrap main {}
