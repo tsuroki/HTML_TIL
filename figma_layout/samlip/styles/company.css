@@ -1,0 +1,147 @@
+body {}
+
+body #wrap {
+}
+body #wrap main {
+    text-align: center;}
+
+
+/* ================문서 경로=============== */
+body #wrap main #path {
+    text-align: right;
+    padding: 14px 80px 14px 0;
+    background-color: var(--color-grayfc, #fcfcfc);
+}
+body #wrap main #path a {
+    font-size: var(--text-sub12);
+    color: var(--color-path-gray67, #676767);
+}
+body #wrap main #path img {margin: 0 10px}
+body #wrap main #path span {font-size: var(--text-sub12);
+    font-weight: var(--weight-semibold,600);
+    color: var(--color-path-gray67,#676767);
+}
+
+
+/* ================contents=============== */
+body #wrap main h1 {
+    font-size: var(--text-title40,2.5rem);
+    font-weight: var(--weight-bold,700);
+    margin-bottom: 26px;
+    margin-top: 71px;
+}
+body #wrap main p
+{
+    margin-bottom: 41px;}
+body #wrap main .bg {
+    background-color: var(--color-grayfc);
+}
+
+
+
+
+/* ============ 1, 2 vision ================= */
+body #wrap main .bg h2.title_2 {
+    color: var(--color-point,#36b4e5);
+    line-height: var(--line-contents,1.5);
+    font-size: var(--text-contents21);
+    margin: 0 auto;
+    padding: 54px 0 10px;
+}
+
+body #wrap main .bg h2.title_2::before {
+    content: '';
+    display: block;
+    width: 1140px;
+    height: 1px;
+    background-color: var(--color-grayd);
+    margin: 0 auto 54px;
+}
+
+body #wrap main .bg p:nth-child(1) {
+}
+body #wrap main .bg > p:nth-child(1),
+body #wrap main .bg > p:nth-child(2),
+body #wrap main .bg > p:nth-child(3){
+    font-size: var(--text-menu18);
+    margin-bottom: 26px;
+}
+
+body #wrap main .bg p {
+    font-size: var(--text-sub31);
+    line-height: var(--line-contents);
+    
+}
+body #wrap main .bg p:nth-child(1) {
+    padding-top: 54px;
+}
+
+
+/* ================= 3 Goal ================= */
+body #wrap main .bg .goal_list {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center ;
+    align-items: center;
+    padding: 20px 0;
+}
+body #wrap main .bg .goal_list > li {
+    width: 250px; height:250px;
+    border-radius: 125px;
+    margin-left: -20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center ;
+    align-items: center;
+    gap: 10px;
+}
+body #wrap main .bg .goal_list > li:nth-child(1) {
+    background-color: var(--color-point);
+}
+body #wrap main .bg .goal_list > li:nth-child(2) {
+    background-color: var(--color-white);
+}
+body #wrap main .bg .goal_list > li:nth-child(3) {
+    background-color: var(--color-orange);
+}
+body #wrap main .bg .goal_list > li:nth-child(1) > img {filter:invert(1)}
+body #wrap main .bg .goal_list > li:nth-child(1) > span {filter:invert(1)}
+body #wrap main .bg .goal_list > li:nth-child(2) > img {}
+body #wrap main .bg .goal_list > li:nth-child(2) > span {}
+body #wrap main .bg .goal_list > li:nth-child(3) > img {filter:invert(1)}
+body #wrap main .bg .goal_list > li:nth-child(3) > span {filter:invert(1)}
+body #wrap main .bg .goal_list > li > img {}
+body #wrap main .bg .goal_list > li > span {
+    font-size: var(--text-menu18);
+}
+
+
+/* ============= 4 STRATEGY ==================== */
+body #wrap main .bg .strategy {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center ;
+    align-items: center;
+    padding: 20px 0 54px;
+}
+body #wrap main .bg .strategy > li {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center ;
+    align-items: center;
+    margin-left: -10px;
+    width: 180px; height:180px;
+    border-radius: 90px;
+    background-color: var(--color-grayf1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    
+}
+body #wrap main .bg .strategy > li > h3 {
+    text-decoration-line:underline;
+    margin-bottom: 10px;
+}
+body #wrap main .bg .strategy > li > span {
+}

@@ -4,6 +4,7 @@
     /* 글자크기 */
     --text-title70:4.375rem;
     --text-title40:2.5rem;
+    --text-sub31:1.938rem;
     --text-contents21:1.313rem;
     --text-card18:1.125rem;
     --text-menu18:1.125rem;
@@ -24,12 +25,16 @@
     --color-graya:#aaa;
     --color-grayd:#ddd;
     --color-gray80:#808080;
+    --color-grayfc:#fcfcfc;
+    --color-grayf1:#f1f1f1;
+    --color-grayf5:#f5f5f5;
+    --color-path-gray67:#676767;
     --color-black:#000;
     --color-title-brown:#642c10;
     --color-title-indigo:#1d356d;
     --color-title-coral:#d43936;
     --color-point:#36b4e5;
-
+    --color-orange:#f3c300;
 
     /* 레이아웃 정보 */
     --width-desktop:1440px;
