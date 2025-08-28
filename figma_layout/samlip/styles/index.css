@@ -1,9 +1,7 @@
 /* index 파일에만 존재하는 디자인 */
 #wrap main {padding-top: 92px;}
 #wrap main .visual_wrap {
-    
-    width: 100vw; overflow: hidden;
-}
+    width: 100vw; overflow: hidden;}
 
 #wrap main .visual_wrap .visual_bnr_wrap {
     /* section 정렬 */
@@ -11,11 +9,13 @@
     flex-flow: row nowrap;
     width: max-content; /* 자식의 전체 너비만큼/ */
 }
+
 #wrap main .visual_wrap .visual_bnr_wrap section {
     background-size:cover;
     height:800px; width: 1920px;
     position: relative;
 }/* 공통 */
+
 #wrap main .visual_wrap .visual_bnr_wrap section h2 {
     font-size:var(--text-title70);
     font-weight:var(--weight-bold);
@@ -23,34 +23,43 @@
     letter-spacing:var(--letter-minus2);
     position:absolute;  left: 80px; bottom: 134px;
 }/* 공통 */
+
 #wrap main .visual_wrap .visual_bnr_wrap section p {
     font-size:var(--text-contents21);
     line-height:var(--line-contents);
     letter-spacing:var(--letter-minus2);
     color:var(--color-gray4);
     position:absolute;  left: 80px; bottom: 30px;
-}/* 공통 */
+}
+
+/* 공통 */
 #wrap main .visual_wrap .visual_bnr_wrap .bnr1 {
     background-image:url(../images/row1_bnr1.jpg);
 }
+
 #wrap main .visual_wrap .visual_bnr_wrap .bnr1 h2 {
     color:var(--color-white);
     /* position: absolute;
     left: 80px; top: 600px; */
 
 }
+
 #wrap main div.visual_wrap .visual_bnr_wrap .bnr1 p {
     color:var(--color-white);
     /* position: absolute;
     left: 80px; top: 756px; */
 }
+
 #wrap main .visual_wrap .visual_bnr_wrap .bnr2 {
     background-image:url(../images/row1_bnr2.jpg);
 }
+
 #wrap main .visual_wrap .visual_bnr_wrap .bnr2 h2 {
     color:var(--color-title-brown);
 }
+
 #wrap main .visual_wrap .visual_bnr_wrap .bnr2 p {}
+
 #wrap main .visual_wrap .visual_bnr_wrap .bnr3 {
     background-image:url(../images/row1_bnr3.jpg);
 }
@@ -128,8 +137,7 @@
 #wrap main .news_notice_wrap .prev_next_wrap a img {}
 
 #wrap main .visual_wrap .prev_next_wrap .next,
-#wrap main .news_notice_wrap .prev_next_wrap .next {
-}
+#wrap main .news_notice_wrap .prev_next_wrap .next {}
 
 #wrap main .visual_wrap .prev_next_wrap .next img,
 #wrap main .news_notice_wrap .prev_next_wrap .next img {
@@ -191,7 +199,7 @@
     font-size: var(--text-card18);
     padding: 20px 20px 0;
 }
-#wrap main .news_notice_wrap .card_wrap .car_all li a .date {
+#wrap main .news_notice_wrap .card_wrap .car_all li .date {
     font-size: var(--text-sub14);
     color: var(--color-gray80);
     position:absolute;
@@ -209,5 +217,5 @@
     gap: 10px;
     margin: 0 auto;
 }
-#wrap main .news_notice_wrap .view_all_button img {}
-#wrap main .news_notice_wrap .view_all_button span {font-size:var(--text-sub14);}
+#wrap main .news_notice_wrap .view_all_button a img {}
+#wrap main .news_notice_wrap .view_all_button a span {font-size:var(--text-sub14);}
