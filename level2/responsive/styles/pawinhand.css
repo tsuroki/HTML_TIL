@@ -1,0 +1,123 @@
+body {}
+body #wrap {}
+body #wrap header {box-shadow : 0 0 10px rgba(0,0,0,0.25)}
+body #wrap header .header_contents {
+    max-width: 100%;
+    width: 1200px; height :64px; margin: 0 auto;
+    background: yellow;
+    display: flex; flex-flow:row nowrap ;
+    justify-content: space-between; align-items: center ;
+}
+body #wrap header .header_contents h1 {}
+body #wrap header .header_contents nav {}
+body #wrap header .header_contents nav a {}
+body #wrap header .header_contents > .m_nav {display: none}
+body #wrap header .header_contents .m_nav a {}
+
+/* main 1행 광고 */
+#wrap main {}
+#wrap main #slide_bnr {
+    max-width: 1200px;
+    overflow:hidden;
+    margin: 0 auto;
+    position: relative;
+}
+#wrap main #slide_bnr .slide_cont {
+    display: flex;
+    width: max-content;
+}
+#wrap main #slide_bnr .slide_cont .slide {
+    max-width: 1200px; width:1200px;
+    height: 650px;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+}
+#wrap main #slide_bnr .slide_cont .slide1 {background-image: url(https://plus.unsplash.com/premium_photo-1667030474693-6d0632f97029?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);}
+#wrap main #slide_bnr .slide_cont .slide2 {background-image: url(https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=843&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);}
+#wrap main #slide_bnr .slide_cont .slide3 {background-image: url(https://plus.unsplash.com/premium_photo-1673967770669-91b5c2f2d0ce?q=80&w=860&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);}
+#wrap main #slide_bnr .slide_cont .slide4 {background-image: url(https://plus.unsplash.com/premium_photo-1674277525410-3a867a5952a7?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);}
+#wrap main #slide_bnr .slide_cont .slide5 {background-image: url(https://plus.unsplash.com/premium_photo-1695803210560-3a6507cdf239?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);}
+#wrap main #slide_bnr .slide_cont .slide6 {background-image: url(https://plus.unsplash.com/premium_photo-1673890961720-81d596540bfc?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);}
+#wrap main #slide_bnr > a {
+    position: absolute;
+}
+#wrap main #slide_bnr .prev {
+    top : 366px; left: 7px;}
+#wrap main #slide_bnr .next {
+    top : 366px; right: 7px;
+}
+#wrap main #slide_bnr .page {width: 100%; background-color: aquamarine; display: flex;
+    flex-wrap: row nowrap; justify-content: center; align-items: center; gap:10px;
+    position: absolute;
+    z-index: 90; bottom:20px; margin: 0 auto;}
+#wrap main #slide_bnr .page .active {background-color: blueviolet;}
+#wrap main #slide_bnr .page span {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 7px;
+    width: 14px; height: 14px;
+}
+#wrap main #slide_bnr .page span:hover {
+    background-color: skyblue;
+}
+/* 2행 */
+#wrap main .info {
+    background-color: pink;
+    max-width: 1200px;
+    height: 270px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto 0;
+    padding: 50px 0;
+}
+#wrap main .info a {
+    width: 100px; height: 100px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#wrap main .info a:hover {
+width: 170px; height: 170px;
+line-height: 170px;
+}
+
+/* 3행 입양문의 */
+#wrap main div.inquiry {
+    max-width: 1200px;
+    padding: 25px 16px;
+}
+#wrap main div.inquiry form {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: left;
+} 
+#wrap main div.inquiry #adopt_frm {}
+#wrap main div.inquiry #adopt_frm h2 {line-height: 150%;}
+#wrap main div.inquiry #adopt_frm input {
+    width: 100%; border: 1px solid #000;
+    padding: 5px 12px;
+    margin: 10px 0px;
+}
+#wrap main div.inquiry #adopt_frm input[text^=tel] {}
+#wrap main div.inquiry #adopt_frm #name {}
+#wrap main div.inquiry #adopt_frm #tel {}
+#wrap main div.inquiry #adopt_frm #question {
+    width: 100%;
+    height: 121px;
+    margin: 0 0 10px 0
+}
+#wrap main div.inquiry #adopt_frm button {
+    width: 100%; border: 1px solid #000;
+    border-radius: 10px; line-height: 150%;
+    padding: 5px
+}
+#wrap main div.inquiry #adopt_frm #submit {}

@@ -1,0 +1,29 @@
+/* pc 1200~max (100%) */
+/* 태블릿 834-1199px */
+/* 모바일 320~833px  */
+
+/* 모바일 제작 시작 -> min-width 으로 규칙 설정 */
+/* PC 제작 시작 -> max-width 으로 규칙 설정 */
+
+/* pc */
+/* 최소 제한 너비는 시작 선택자에 먼저 작성. */
+body {background: #ffd0d0;}
+main {width: 1200px; margin: 0 auto; border: 2px solid #000;}
+main h1 {font-weight: 700; font-size:2.625rem;}
+
+
+/* 태블릿 */
+/* @media screen and (규칙) {규칙 성립 시 실행되는 CSS 선택자와 속성값} */
+@media screen and (max-width: 1199px) {
+    /* 선택자 {속성:값; 속성:값;} */
+    body {background: #fff397;
+    }
+}
+main {width: 100%; padding: 0 30px;}
+main h1 {font-size: 2.25rem;}
+/* 모바일 */
+@media screen and (max-width: 833px) {
+    body { background: #ff0070; min-width : 320px;}
+    main {padding: 0 15px;}
+    main h1 {font-size: 2rem;}
+}

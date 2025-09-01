@@ -1,0 +1,32 @@
+/* 태블릿 */
+
+@media screen and (max-width:1199px) {
+#wrap header .header_contents {margin: 0 20px; height:64px; position:relative;}
+#wrap main .info a:nth-child(8),
+#wrap main .info a:nth-child(9) {display:none;}
+}
+/* 모바일 */
+
+@media screen and (max-width:767px) {
+#wrap header .header_contents > nav {display: none;}
+#wrap header .header_contents > .m_nav {display:block;}
+#wrap header .header_contents .m_nav > nav {
+    background: lightgray; position:absolute; top:64px; right: 0;
+    width: 226px; height:calc(100% - 64px); display:flex; flex-flow: column nowrap; justify-content:center;
+    padding-top: 20px;
+    align-items: center; gap:20px; width: 428px;}
+    
+    #wrap main #slide_bnr {margin: 0; height: 268px;}
+    #wrap main .info {
+        min-width: 429px;
+        height: 130px;}
+    #wrap main .info a {
+        width: 40px; height: 40px;
+    }
+    #wrap main .info a:hover {
+    width: 80px; height: 80px;
+    line-height: 80px;}
+    #wrap main .info {
+        margin: 0 auto 0;
+        padding: 25px 0;}
+}
