@@ -11,9 +11,12 @@
         body, html {background-color:#111;}
         /* Firefox */
         html {scrollbar-width: 10px;;scrollbar-color: #222 #e73b3b;}
+        /* ========================================================= */
         /* Opera */
-        html::-o-scrollbar {width: 10px;}
+        html::-o-scrollbar {width: 10px;} /* 스크롤바 크기 */
         html::-o-scrollbar-thumb {background-color: #222;border-radius: 5px;}
+        /* 스크롤 드래그 바 색상 및 모양 */
+        /* ========================================================= */
         /* Chrome, Safari, Edge 등 웹킷 기반 브라우저 */
         ::-webkit-scrollbar {width: 10px;}
         ::-webkit-scrollbar-track {box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);}
@@ -31,9 +34,11 @@
         nav {
             width:100%; margin:0 auto; background:#222;
             display:flex; justify-content:space-around; 
+            position: sticky; z-index: 200; top:050px
         }
         nav a {position:relative; display:inline-block; line-height:60px; padding:0 20px; color:#fff; font-size:0.875rem;}
-        nav a::after {display:block; position:absolute; content:''; background:#e73b3b; width:100%; height:1px; bottom:1px; left:0; display:none;}
+        nav a::after {display:block; position:absolute; content:''; background:#e73b3b;
+            width:100%; height:1px; bottom:1px; left:0; display:none;}
         nav a:hover {color:#e73b3b;}
         nav a:hover::after {display:block;}
         main {}
@@ -42,6 +47,7 @@
             background-size:cover;
             background-position:center;
             position:relative;
+            /* background-attachment: fixed; *//* 스크롤 기본값 */
         }
         main section:nth-child(1) {background-image:url(images/optimize1.png);}
         main section:nth-child(2) {background-image:url(https://images.unsplash.com/photo-1566932769119-7a1fb6d7ce23?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);}

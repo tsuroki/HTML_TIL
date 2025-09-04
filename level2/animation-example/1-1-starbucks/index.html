@@ -18,13 +18,21 @@
         }
         #v_btn {
             position:absolute; left:0; bottom:20px; width:100%;
-            display:flex; justify-content: center;
+            display:flex; justify-content: center; /* 컨텐츠 시작 기준점 정의 !*/
         }
         #v_btn a {
             width:50px; margin:0 10px; 
             display:flex; align-items:flex-end;
+            position: relative
         }
-        #v_btn a img {width:100%;}
+        #v_btn a img {width:100%; transition: top 1S;transition: transform 0.3s cubic-bezier(1, 0, 0, 0.99);
+        }
+            
+
+        #v_btn a:hover img {
+            position: absolute;
+            transform: translateY(-20px);
+        }
     </style>
     <script>
         window.onload=function(){
