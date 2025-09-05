@@ -34,16 +34,63 @@ header nav > ul {
 header nav > ul > li {padding:0 10px; position:relative;}
 header nav > ul > li > a {}
 header nav > ul > li > .sub {
-    position:absolute; 
+    position:absolute;
+    transition: all 0.5s;
+    opacity: 0;
+    transform: translateY(-120px);
 }
-header nav > ul > li > .sub li {width:100px; padding: 10px 0 0;}
+header nav > ul > li > .sub li {width:100px; padding: 10px 0 0; }
 header nav > ul > li > .sub li a {}
+header nav > ul > li:hover .sub {
+    opacity: 1; transform: translate(0,0);
+}
 header nav > ul > li > .sub li a:hover {color:#ddd;}
 /*section*/
 section {}
-section .sec1 {background-image:url(../images/main_bg_01.jpg)}
-section .sec2 {background-image:url(../images/main_bg_02_3.jpg)}
-section .sec3 {background-image:url(../images/main_bg_03.jpg)}
+section .sec1 {background-image:url(../images/main_bg_01.jpg);background-attachment: fixed;}
+section .sec2 {background-image:url(../images/main_bg_02_3.jpg);background-attachment: fixed;}
+section .sec2 .container {
+    width: 1440px; margin:0 auto;
+    position: relative; }
+section .sec2 .container .space {position: absolute; top:50%;
+transform: translateY(-50%);
+z-index:50;transform: translateY();}
+section .sec2 .container h1{position: relative; z-index: 100; color: #fff;}
+section .sec2 .container h1+p{position: relative; z-index: 100;  color: #fff;}
+section .sec2 .container .space1 {left:0;}
+section .sec2 .container .space1 img {animation:move100 2s infinite;}
+section .sec2 .container .space2 {right: 0;}
+section .sec2 .container .space2 img {animation:rotate360 10s linear infinite;}
+section .sec2 .container .space3 {animation:astro 20s linear infinite; left:43%; transform-origin:center}
+
+/* 애님이션 준비 1. keyframes */
+/* 애님이션 준비 2. 적용 요소 선택자 animation 속성으로 키프레임 블러오기 */
+/* keyframs 애니이름 {from ~ to 아미녀 0~100% 최소 2개 이상 장면 분기} */
+@keyframes rotate360 {
+    0% {transform: rotate(0deg) ;}
+    100% {transform:rotate(360deg); }
+}
+
+@keyframes move100 {
+    0% {transform: translateY(0px)}
+    50%{transform: translateY(-100px)}
+    100%{transform: translateY(0px)}
+}
+
+@keyframes astro {
+    0% {transform: translate(0,0)}
+    10%{transform: translate(-100px,-100px) rotate(-20deg)}
+    25%{transform: translate(-75px, 0px) rotate(30deg)}
+    40%{transform: translate(-5px, 55px) rotate(-10deg)}
+    70%{transform: translate(50px, -10px) rotate(20deg)}
+    85%{transform: translate(10px, 40px) rotate(-40deg)}
+    100%{transform: translate(0, 0) rotate(0deg)}
+}
+
+
+/* footer  */
+section .sec2 .container p img{}
+section .sec3 {background-image:url(../images/main_bg_03.jpg);background-attachment: fixed;}
 section > div {
     background-size:cover; background-position:center;
     text-align:center; height:100vh; width:100%; 

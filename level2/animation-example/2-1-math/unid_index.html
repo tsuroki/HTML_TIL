@@ -27,8 +27,9 @@
             font-weight:bold; line-height: 100px;
         }
         /* header-nav-.dep1 */
+        #h_bg header nav .main:hover .dep1{height: 600px;}
         #h_bg header nav .main > li > .dep1 {
-            position:absolute; width:100%; height:0; transition:height 0.5s;
+            position:absolute; width:100%; height:0/*  */; transition:height 0.5s;
             background:#fff; padding-left:20px; z-index:800; overflow:hidden;
         }
         #h_bg header nav .main > li > .dep1 > li {}
@@ -55,22 +56,55 @@
         }
         #h_bg header .all_nav span {background:#0f6e38; width:100%; height:5px;}
         /* main */
-        main {background:url(images/unid/bg.jpg) center top;background-size:cover; height:100vh;}
+        main {background:url(images/unid/bg.jpg) center top;background-size:cover; height:100vh;
+        }
+
         main .center {
             width:1200px; height:100vh; margin: 0 auto;
             display:flex; justify-content: space-between; align-items:center;
         }
         main .center h1 {color:#fff; display:flex; flex-flow:column nowrap; justify-content: space-between;}
-        main .center h1 span {font-size:3.5rem; letter-spacing:-2.5px; padding:10px 0;}
-        main .center .right {
-            position:relative; right:174px; top:-100px;
+        main .center h1 span {font-size:3.5rem; letter-spacing:-2.5px; padding:10px 0; color: #fff}
+        main .center h1 span:nth-child(1) {
+            opacity: 0;
+            transform: translate(0,100px);
+            animation: move 0.5s both;
         }
+        main .center h1 span:nth-child(2) {
+            opacity: 0;
+            transform: translate(0,100px);
+            animation: move 0.5s both 0.5s;}
+        
+        main .center .right {animation: rightleft 0.5s both;
+            position:relative; right:174px; top:-100px;;}
         main .center .right span {
             position:absolute; width:174px; height:174px;
         }
-        main .center .right span:nth-child(1) {}
+        main .center .right span:nth-child(1) {
+            animation: rotate 15s linear alternate-reverse infinite;
+        }
         main .center .right span:nth-child(2) {text-align:center; line-height:174px;}
+        
         /* animation */
+        @keyframes move {
+            0% {
+                transform: translate(0,100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translate(0,0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes rightleft {
+            0% {transform: translateX(300px); opacity: 0;}
+            100% {transform: rotate(0); opacity: 1}
+        }
+        @keyframes rotate {
+            0% {transform: rotate(0deg);}
+            100% {transform: rotate(360deg);}
+        }
     </style>
 </head>
 <body>
@@ -149,7 +183,9 @@
         <main>
             <div class="center">
                 <h1>
+                    <!-- 먼저 -->
                     <span>고객이 필요한 것을</span>
+                    <!-- 후순위 딜레이 0.6초 -->
                     <span>먼저 생각합니다.</span>
                 </h1>
                 <div class="right">

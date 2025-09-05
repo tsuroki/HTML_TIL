@@ -7,6 +7,7 @@
     <title>KFC</title>
     <link rel="stylesheet" href="reset.css">
     <style>
+        main .text  #border                                                                                         klllllll                                                                                                                                                                                                                                               
         body, html {background:#da1e27;}
         header, main {width:1400px; margin:0 auto;}
         header {padding:30px 0;}
@@ -15,23 +16,40 @@
         main .txt #order {
             background:#fff; border-radius:50px; text-align:center; padding:20px 0;
             display:inline-block; margin-top:50px; font-weight:600;
-            width:200px; color:#000;
+            width:200px; color:#000; 
+            transition: all 0.3s;
+            transform-origin: left;
+        }
+        main .txt #order:hover {color:#da1e27; width: 300px;
         }
         #sns {position:absolute; left:0; bottom:100px;}
         #sns a {
             display:inline-block; width:40px; margin:0 10px;
-            position:relative; top:0;
+            position:relative; top:0; transition: all 0.3s ; transform-origin: bottom;
+        }
+        #sns a:hover {transform: translateY(-30px);
         }
         #sns a img {width:100%;}
+
+
         #dynamic #btn {display:flex; position:absolute; right:0; bottom:100px;}
         #dynamic #btn a {margin:0 5px;}
         #dynamic #btn a#prev {}
-        #dynamic #btn a#next {}
+        #dynamic #btn a#next {transform: scaleX(-1);}
+
+        #dynamic #btn a:hover + #img .menu1 {display:none}
+        #dynamic #btn a:hover + #img .menu3 {display:inline-block}
+
+        #dynamic #img {position: relative; width: 668px; height: 596px; background: aqua;}
+        #dynamic #img img {}
+        #dynamic #img .menu1 {}
+        #dynamic #img .menu3 {position: absolute; left: 0; top: 0; display: none;}
     </style>
     <script>
         window.onload=function(){
 
             
+        
 
         }//e:onload
     </script>
@@ -51,7 +69,8 @@
             </div>
             <div id="dynamic">
                 <div id="img">
-                    <img src="images/menu1.png" alt="" id="big">
+                    <img src="images/menu1.png" alt="" id="big" class="menu1">
+                    <img src="images/menu3.png" alt="" class="menu3">
                 </div>
                 <div id="btn">
                     <a href="#" id="prev"><img src="images/prev_next.png" alt=""></a>

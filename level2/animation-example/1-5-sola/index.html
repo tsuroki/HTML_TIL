@@ -15,25 +15,47 @@
         .h_bg {background:#fff; position:fixed; left:0; top:0; width:100%; z-index:999;}
         .h_bg header {width:1200px; margin:0 auto;}
         .h_bg header img {width:100%;}
+        /* =================================================== */
         .slide_wrap {}
         .slide_wrap .slide_c {position:relative;}
         .slide_wrap .slide_c .slide {
             position:absolute; left:0; top:0;
             width:100%; height:100vh;
             background-position:center;
-            opacity:0; transition:opacity 0.5s;
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity:0; transition: opacity 0.5s;
         }
-        .slide_wrap .slide_c .slide1 {background-image:url(images/bg1.jpg); opacity:1}
+        .slide_wrap .slide_c .slide1 {
+            background-image:url(images/bg1.jpg); opacity:1;
+            animation: bg_zoom 3s linear both;
+            transform-origin: center;
+        }
         .slide_wrap .slide_c .slide2 {background-image:url(images/bg2.jpg);}
         .slide_wrap .slide_c .slide3 {background-image:url(images/bg3.jpg);}
         .slide_wrap .slide_c .slide p {
             text-align:center; color:#fff;
             font-size:3rem; letter-spacing:-1px;
             position:relative; top:400px;
+            animation: bg_title 2.5s linear 0.5s both;
+            opacity : 0;
         }
         /* class */
 
         /* animation */
+
+        @keyframes bg_zoom {
+            0% {background-size: 100% auto;}
+            50%{background-size: 140% auto;}
+            70%{background-size: 160% auto;;}
+            100%{background-size: 180% auto;}
+        }
+        @keyframes bg_title {
+            0% {opacity: 0; font-size: 3rem;}
+            50%{opacity: 0.6; font-size: 4.6rem}
+            70%{opacity: 0.8; font-size: 4.9rem}
+            100%{opacity: 1; font-size: 5.1rem}
+        }
 
     </style>
     <script>
