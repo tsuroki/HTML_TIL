@@ -1,0 +1,19 @@
+@keyframes move_up_down {
+    0% {transform: translate(0,0);}
+    50% {transform: translate(0,-50px);}
+    100%{transform: translate(0,0);}
+}
+
+@keyframes tire_roll {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(-360deg);}
+}
+
+@keyframes bg_pass {
+    0% {background-position-x: 0;}
+    100% {background-position-x: 100vh;}
+}
+@keyframes tong {
+    0% {background-position-x: 0;}
+    100% {background-position-x: 100vh;}
+}

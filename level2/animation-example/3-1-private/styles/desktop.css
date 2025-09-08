@@ -1,16 +1,39 @@
-body, html {background:rgb(9,13,43)}
+body, html {background:rgb(9,13,43);}
 /* design */
+main {position: relative; z-index: 400;}
+
+main::before,
+main::after {
+    background: linear-gradient(90deg, rgb(9,13,43) transparent);
+    content: '';
+    display: block;
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 500;
+    border: solid 1px yellow;
+}
+
+main::before{left: 0;
+}
+
+main:after{right: 0; transform: scaleX(-1) ;
+}
+
+main > section, main > div {position: relative;}
 header {
     height:80px; width:1400px; margin:0 auto;
     display:flex; justify-content:space-between;
     align-items:center; z-index:999;
     position:fixed; left:50%; top:0; margin-left:-700px;
 }
-header nav a {margin:0 7px;}
+header nav a {margin:0 7px; color: #fff;}
 header .right a {
     position:relative; padding:5px 5px 5px 27px;
     border:1px dashed rgba(255,255,255,0.6); 
     font-size:0.875rem; border-radius:3px;
+    color: #fff;
 }
 header .right a::before {
     content:''; display:block;
@@ -40,14 +63,17 @@ main .bg_wrap .bg {width:1400px; margin:0 auto;}
 main .bg_wrap .bg1 {
     height:100px; 
     background:url(../images/bg_cloud.png) repeat-x;
+    animation: bg_pass 30s linear infinite;
 }
 main .bg_wrap .bg2 {
     height:200px; 
     background:url(../images/bg_city1.png) repeat-x;
+    animation: bg_pass 15s linear infinite;
 }
 main .bg_wrap .bg3 {
     height:100px; position:relative; top:-96px;
-    background:url(../images/bg_city2.png) repeat-x;
+    background:url(../images/bg_city2.png) repeat;
+    animation: bg_pass 9s linear infinite;
 }
 /* 메인제목 */
 main .txt {}
@@ -61,3 +87,9 @@ main .car #left_tire, main .car #right_tire {
 main .car #left_tire {left:102px;}
 main .car #right_tire {right:91px;}
 
+main .car #left_tire,
+main .car #right_tire {animation: tire_roll 1s linear infinite}
+main .car #left_tire {}
+
+main .scroll {}
+main .scroll img {animation: move_up_down 4s linear infinite;}
